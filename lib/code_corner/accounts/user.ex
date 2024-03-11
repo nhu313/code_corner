@@ -5,6 +5,8 @@ defmodule CodeCorner.Accounts.User do
   schema "users" do
     field :email, :string
     field :name, :string
+    field :admin, :boolean, default: false
+    field :experiment, :integer, default: 2
     field :password, :string, virtual: true, redact: true
     field :hashed_password, :string, redact: true
     field :confirmed_at, :naive_datetime
@@ -37,13 +39,13 @@ defmodule CodeCorner.Accounts.User do
   """
   def registration_changeset(user, attrs, opts \\ []) do
     user
-    |> cast(attrs, [:email, :password, :name])
+    |> cast(attrs, [:email, :password, :name, :admin, :experiment])
     |> validate_email(opts)
-    |> validate_name(opts)
+    |> validate_name()
     |> validate_password(opts)
   end
 
-  defp validate_name(changeset, opts) do
+  defp validate_name(changeset) do
     changeset
     |> validate_required([:name])
     |> validate_length(:email, max: 256)

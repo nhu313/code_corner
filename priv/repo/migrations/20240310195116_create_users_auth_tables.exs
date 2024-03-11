@@ -7,6 +7,8 @@ defmodule CodeCorner.Repo.Migrations.CreateUsersAuthTables do
     create table(:users) do
       add :email, :citext, null: false
       add :name, :string, null: false
+      add :admin, :boolean, null: false, default: false
+      add :experiment, :integer, null: false, default: 2
       add :hashed_password, :string, null: false
       add :confirmed_at, :naive_datetime
       timestamps(type: :utc_datetime)

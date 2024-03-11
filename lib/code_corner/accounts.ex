@@ -75,9 +75,28 @@ defmodule CodeCorner.Accounts do
 
   """
   def register_user(attrs) do
+    attrs = attrs |> set_admin() |> set_experiment()
+
     %User{}
     |> User.registration_changeset(attrs)
     |> Repo.insert()
+  end
+
+  defp set_experiment(attrs) do
+    experiment = rem(count(), 3) + 1
+    Map.put(attrs, "experiment", experiment)
+  end
+
+  defp set_admin(attrs) do
+    if (attrs["email"] == System.get_env("ADMIN_EMAIL")) do
+      Map.put(attrs, "admin", true)
+    else
+      Map.put(attrs, "admin", false)
+    end
+  end
+
+  defp count() do
+    Repo.one(from u in User, select: count())
   end
 
   @doc """
