@@ -21,16 +21,4 @@ config :logger, level: :info
 # of environment variables, is done on config/runtime.exs.
 
 config :code_corner, CodeCornerWeb.Endpoint,
-  url: [host: "codecorner.gigalixirapp.com"]
-
-
-2024-03-11T06:11:39.932739+00:00 codecorner[b'codecorner-6cfb659cdd-rrvqq']: web.1  |   1. update [url: [host: ...]] to your actual host in the
-2024-03-11T06:11:39.932795+00:00 codecorner[b'codecorner-6cfb659cdd-rrvqq']: web.1  |      config file for your current environment (recommended)
-2024-03-11T06:11:39.932810+00:00 codecorner[b'codecorner-6cfb659cdd-rrvqq']: web.1  |
-2024-03-11T06:11:39.932834+00:00 codecorner[b'codecorner-6cfb659cdd-rrvqq']: web.1  |   2. pass the :check_origin option when configuring your
-2024-03-11T06:11:39.932854+00:00 codecorner[b'codecorner-6cfb659cdd-rrvqq']: web.1  |      endpoint or when configuring the transport in your
-2024-03-11T06:11:39.932879+00:00 codecorner[b'codecorner-6cfb659cdd-rrvqq']: web.1  |      UserSocket module, explicitly outlining which origins
-2024-03-11T06:11:39.932912+00:00 codecorner[b'codecorner-6cfb659cdd-rrvqq']: web.1  |      are allowed:
-2024-03-11T06:11:39.932936+00:00 codecorner[b'codecorner-6cfb659cdd-rrvqq']: web.1  |
-2024-03-11T06:11:39.932978+00:00 codecorner[b'codecorner-6cfb659cdd-rrvqq']: web.1  |         check_origin: ["https://example.com",
-2024-03-11T06:11:39.933040+00:00 codecorner[b'codecorner-6cfb659cdd-rrvqq']: web.1  |                        "//another.com:888", "//other.com"]
+  check_origin: ["https://codecorner.gigalixirapp.com"]
