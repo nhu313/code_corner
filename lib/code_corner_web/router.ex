@@ -11,6 +11,7 @@ defmodule CodeCornerWeb.Router do
     plug :protect_from_forgery
     plug :put_secure_browser_headers
     plug :fetch_current_user
+    plug CodeCornerWeb.Plugs.RequestLog
   end
 
   pipeline :api do
@@ -28,6 +29,9 @@ defmodule CodeCornerWeb.Router do
     pipe_through [:browser, :require_authenticated_user, :require_admin]
 
     live_dashboard "/dashboard", metrics: CodeCornerWeb.Telemetry
+    get "/request_logs/users/:user_id", RequestLogController, :user
+    get "/request_logs", RequestLogController, :index
+    delete "/request_logs/:id", RequestLogController, :delete
   end
 
 

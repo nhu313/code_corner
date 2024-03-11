@@ -1,0 +1,18 @@
+<.header>
+  Request logs
+</.header>
+
+<.table id="request_logs" class="border-spacing-0" rows={@request_logs} row_click={&JS.navigate(~p"/admin/request_logs/users/#{&1.user_id}")}>
+  <:col :let={request_log} label="User"><%= request_log.user_id %></:col>
+  <:col :let={request_log} label="Path"><%= request_log.path %></:col>
+  <:action :let={request_log}>
+    <div class="sr-only">
+      <.link navigate={~p"/admin/request_logs/users/#{request_log.user_id}"}>Show</.link>
+    </div>
+  </:action>
+  <:action :let={request_log}>
+    <.link href={~p"/admin/request_logs/#{request_log}"} method="delete" data-confirm="Are you sure?">
+      Delete
+    </.link>
+  </:action>
+</.table>
