@@ -11,6 +11,10 @@ config :code_corner, CodeCornerWeb.Endpoint,
 # Configures Swoosh API Client
 config :swoosh, api_client: Swoosh.ApiClient.Finch, finch_name: CodeCorner.Finch
 
+config :code_corner, CodeCorner.Mailer,
+  adapter: Swoosh.Adapters.Sendgrid,
+  api_key: System.get_env("MAILER_API")
+
 # Disable Swoosh Local Memory Storage
 config :swoosh, local: false
 
