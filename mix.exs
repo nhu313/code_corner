@@ -53,6 +53,7 @@ defmodule CodeCorner.MixProject do
        depth: 1},
       {:swoosh, "~> 1.5"},
       {:finch, "~> 0.13"},
+      {:gen_smtp, "~> 1.1.1"},
       {:telemetry_metrics, "~> 0.6"},
       {:telemetry_poller, "~> 1.0"},
       {:gettext, "~> 0.20"},
