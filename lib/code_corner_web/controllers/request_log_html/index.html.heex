@@ -2,7 +2,7 @@
   Request logs
 </.header>
 
-<.table id="request_logs" class="border-spacing-0" rows={@request_logs} row_click={&JS.navigate(~p"/admin/request_logs/users/#{&1.user_id}")}>
+<.table id="request_logs" rows={@request_logs} row_click={&JS.navigate(~p"/admin/request_logs/users/#{&1.user_id}")}>
   <:col :let={request_log} label="User"><%= request_log.user_id %></:col>
   <:col :let={request_log} label="Path"><%= request_log.path %></:col>
   <:action :let={request_log}>
