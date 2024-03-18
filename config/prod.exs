@@ -19,3 +19,6 @@ config :logger, level: :info
 
 # Runtime production configuration, including reading
 # of environment variables, is done on config/runtime.exs.
+
+config :code_corner, CodeCornerWeb.Endpoint,
+  check_origin: ["https://codecorner.gigalixirapp.com"]

@@ -30,6 +30,7 @@ config :code_corner, CodeCornerWeb.Endpoint,
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
 config :code_corner, CodeCorner.Mailer, adapter: Swoosh.Adapters.Local
+config :code_corner, :api_client, false
 
 # Configure esbuild (the version is required)
 config :esbuild,
