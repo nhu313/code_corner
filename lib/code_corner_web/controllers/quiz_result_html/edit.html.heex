@@ -1,0 +1,8 @@
+<.header>
+  Edit Quiz result <%= @quiz_result.id %>
+  <:subtitle>Use this form to manage quiz_result records in your database.</:subtitle>
+</.header>
+
+<.quiz_result_form changeset={@changeset} action={~p"/quiz_results/#{@quiz_result}"} />
+
+<.back navigate={~p"/quiz_results"}>Back to quiz_results</.back>

@@ -1,0 +1,17 @@
+<.header>
+  Lesson <%= @lesson.id %>
+  <:subtitle>This is a lesson record from your database.</:subtitle>
+  <:actions>
+    <.link href={~p"/lessons/#{@lesson}/edit"}>
+      <.button>Edit lesson</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.list>
+  <:item title="Order"><%= @lesson.order %></:item>
+  <:item title="Name"><%= @lesson.name %></:item>
+  <:item title="View"><%= @lesson.view %></:item>
+</.list>
+
+<.back navigate={~p"/lessons"}>Back to lessons</.back>

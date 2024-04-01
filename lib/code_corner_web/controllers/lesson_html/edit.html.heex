@@ -1,0 +1,8 @@
+<.header>
+  Edit Lesson <%= @lesson.id %>
+  <:subtitle>Use this form to manage lesson records in your database.</:subtitle>
+</.header>
+
+<.lesson_form changeset={@changeset} action={~p"/lessons/#{@lesson}"} />
+
+<.back navigate={~p"/lessons"}>Back to lessons</.back>

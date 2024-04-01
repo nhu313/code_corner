@@ -1,7 +1,7 @@
 defmodule CodeCorner.Accounts.UserNotifier do
   import Swoosh.Email
 
-  alias CodeCorner.Mailer
+  # alias CodeCorner.Mailer
 
   # Delivers the email using the application mailer.
   defp deliver(recipient, subject, body) do

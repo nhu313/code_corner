@@ -59,6 +59,8 @@ defmodule CodeCornerWeb.Router do
       live "/users/settings", UserSettingsLive, :edit
       live "/users/settings/confirm_email/:token", UserSettingsLive, :confirm_email
     end
+
+    resources "/quiz_results", QuizResultController
   end
 
   scope "/", CodeCornerWeb do
@@ -71,5 +73,11 @@ defmodule CodeCornerWeb.Router do
       live "/users/confirm/:token", UserConfirmationLive, :edit
       live "/users/confirm", UserConfirmationInstructionsLive, :new
     end
+
+    get "/lessons/variables", LessonController, :variables
+    get "/lessons/data_types", LessonController, :data_types
+    resources "/lessons", LessonController
+
+    resources "/quizzes", QuizController
   end
 end
