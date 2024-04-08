@@ -28,6 +28,9 @@ body {
   max-width: 95%;
   font-family: "Open Sans", sans-serif;
 }
+#logo-sidebar {
+  border-right: 1px solid #DDD;
+}
 
 #logo-sidebar, .sidebar {
   background-color: #fafbfc;
