@@ -29,6 +29,10 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+#logo-sidebar, .sidebar {
+  background-color: #fafbfc;
+}
+
 p {
   padding-bottom: 13px;
 }
@@ -76,4 +80,8 @@ p {
   width: 20px;
   height: 20px;
   background-color: white;
+}
+
+.top-nav {
+  border-bottom: 1px solid #EEE;
 }

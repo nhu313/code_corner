@@ -1,6 +1,6 @@
 <.flash_group flash={@flash} />
 
-<nav class="fixed top-0 z-40 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+<nav class="fixed top-0 z-40 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 top-nav">
   <div class="px-3 py-3 lg:px-5 lg:pl-3">
     <div class="flex items-left justify-between">
       <div class="flex items-left justify-start rtl:justify-end">
@@ -84,27 +84,27 @@
   </div>
 </nav>
 
-<aside id="logo-sidebar" class="fixed top-0 w-32 left-0 z-30 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
-   <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
-      <ul class="space-y-2 font-medium">
+<aside id="logo-sidebar" class="h-max fixed w-32 top-0 left-0 z-30 h-screen pt-20 transition-transform -translate-x-full border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
+   <div class="h-full px-3 pb-4 overflow-y-auto dark:bg-gray-800">
+      <ul class="font-medium h-max sidebar">
          <li>
             <a href="/lessons/data_types" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-             <span class="material-symbols-outlined">check_circle</span> Data Types
+            <span class="checkmark empty-circle"></span>1. Data Types
             </a>
          </li>
          <li>
             <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-              Variables
+              <span class="checkmark empty-circle"></span>2. Variables
             </a>
          </li>
          <li>
             <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-               Class
+              <i class="fa fa-circle-check checkmark checked"></i>3. Class
             </a>
          </li>
          <li>
             <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-               Objects
+              <span class="checkmark empty-circle"></span>4. Objects
             </a>
          </li>
       </ul>
