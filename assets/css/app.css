@@ -3,3 +3,77 @@
 @import "tailwindcss/utilities";
 
 /* This file is for your main application CSS */
+
+a {
+  text-decoration: none;
+  border-bottom: 0;
+}
+
+h1, h2, h3, h4, h5, nav {
+  font-family: "Roboto Slab",serif;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 600;
+  padding-bottom: 13px;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+body {
+  max-width: 95%;
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  padding-bottom: 13px;
+}
+
+.sidebar {
+  font-family: "Roboto Slab",serif;
+}
+
+.sidebar li {
+  border-left: 2px dashed #CCC;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.icons-outline {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.sidebar .checkmark {
+  position: absolute;
+  left: 8px;
+  font-size: 24px;
+}
+
+.sidebar .checked {
+  color: #52BE4F;
+  background-color: white;
+}
+
+.sidebar .empty-circle {
+  color: white;
+  border: 2px solid #7f888f;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+}
