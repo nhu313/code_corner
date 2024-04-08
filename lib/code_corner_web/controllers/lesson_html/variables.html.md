@@ -1,30 +1,28 @@
-A variable is a name given to a value. For example, in the context of the line item in our receipt, we need to named the values.
+# Variables
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/523aebaf-e480-4115-9e2f-18850413edab/2d7f2808-53ff-4bdc-951d-f4f9036557e2/Untitled.png)
+A variable is a name given to a value. We use a variable when we don't know what the input is going to be. For example, a customer name for the order is going to change depending on the customer, therefore, we need a way to refer to it in the system. We can use a variable to do so. A variable is also used when we need to refer to it multiple times, like the receipt total. To declare a variable, you need:
 
-To declare a variable, you need three things:
+<ol class="ordered-list">
+<li>Type</li>
+<li>Variable name</li>
+<li>Value</li>
+</ol>
+<br />
 
-1. Type
-2. Variable name
-3. Value
+For example, here’s how to declare or create a variable named `quantity` with the value of `1`:
 
-For example, for the line item one for the drip coffee, the quantity is 1 and the price is 3.75. Here’s how to declare/create a variable named quantity with the value of 1:
+<div class="lesson-image">
+  <img src="/images/variable.png" width="300px">
+  <p>Figure 1: Declare a variable in Java</p>
+</div>
 
-```python
-// 1. type - int
-// 2. name - quantity
-// 3. value - 1
+Here’s how to declare a variable named `price` with the value of `3.75`.
 
-int quantity = 1;
-```
-
-For price, the data type is a double. Here’s how to declare a variable named price with the value of 3.75.
-
-```python
+```java
 double price = 3.75
 ```
-
-Let’s practice!
+<br />
+### Let’s practice!
 
 1. Declare/Create a variable name total with the value of 23.87.
 
@@ -43,25 +41,34 @@ Let’s practice!
     `double tax = 1.37`
 
 
-# Variable without a value
+## Variable without a value
 
-Sometimes we don’t know what the value is because we need to calculate it or ask the user for it. In that case, we can declare a variable without a value. To declare a variable without a value, you need two things:
+Sometimes we don’t know what the value is because we need to calculate or ask the user for it. In that case, we can declare a variable without a value. To declare a variable without a value, you need:
+<ol class="ordered-list">
+  <li>Type</li>
+  <li>Variable name</li>
+</ol>
 
-1. Type
-2. Variable name
+For xample, if quantity is unknown, we can declare:
 
-```python
-int total;
+```java
+int quantity;
+```
+Or like above, if the price is unknown, we can delare it with this:
+
+```java
+double price;
 ```
 
-Let’s practice:
+
+### Let’s practice:
 
 1. Declare a variable type boolean with the name paid to indicate if a table paid their tab.
 2. Declare a variable named initial to indicate the server first name initial (one character).
 3. Declare a variable named count to indicate the number of customer served.
 4. Declare a variable named check of the type integer.
 
-# Updating a variable
+## Updating a variable
 
 To update a variable,
 
