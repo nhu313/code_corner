@@ -88,3 +88,68 @@ p {
 .top-nav {
   border-bottom: 1px solid #EEE;
 }
+
+header p {
+  text-transform: none;
+
+}
+
+.primary-btn {
+  background-color: #007396;
+  color: white !important;
+  border: 0 !important;
+  box-shadow:none;
+}
+
+button {
+  box-shadow: none;
+  color: inherit !important;
+}
+
+.lesson-image {
+  text-align: center;
+  place-content: center;
+}
+
+.lesson-image p {
+  font-size: 11px;
+}
+
+.lesson-image img {
+  display: inline-block;
+}
+
+h3 {
+  font-size: 23px;
+}
+
+.lesson h3 {
+  padding-top: 5px;
+}
+
+strong {
+  color: #222;
+}
+
+.lesson-actions {
+  text-align: center;
+}
+
+.lesson-next {
+  background-color: #007396;
+  margin-top: 15px;
+  padding: 5px 15px;
+  font-weight: 600;
+}
+
+.lesson-next a {
+  color: white;
+}
+
+.lesson-next a:hover {
+  color: white;
+  background-color: #222;
+  margin-top: 15px;
+  padding: 5px 15px;
+  font-weight: 600;
+}
