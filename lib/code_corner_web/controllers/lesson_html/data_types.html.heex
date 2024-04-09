@@ -1,0 +1,154 @@
+<h1>
+  Data Types</h1>
+<p>
+  Data types are the basic building blocks for Java. Similar to Lego bricks, data types vary in size which determine the amount of storage it needs. By combining different data types, we can develop systems like a small cafe management tool or a complex system like Google search or OpenAI.</p>
+<p>
+  Computer stores data in <a href="https://en.wikipedia.org/wiki/Binary_number">binaries</a> which are just 0s and 1s. It needs a way to specify that this data is a number and this data is a letter. Consider this receipt as an illustration. What type of data is needed to saved this information?</p>
+<div class="lesson-image">
+    <img src="/images/receipt.png" width="300px">
+  <p>Figure 1: Sample receipt</p></div>
+<h2>
+  Primitive data types</h2>
+<p>
+In Java, there are 8 primitive data types, divided into 3 categories: integers, decimals, letters, and boolean. Each of these types requires a specific amount of storage space to store the information. The term “byte” denotes the amount of space needed for data storage.</p>
+<h3>
+Integers</h3>
+<p>
+An integer is a whole numbers without any fractional part. Integers can be positive, negative, or zero. There are four integer types in Java: byte, short, int, and long. The table below shows the range of the integer each type represent. Historically, storage was important due to the costliness of storage space. However, storage is no longer a significant constraints, therefore most developers uses <code class="inline">int</code> for small number and <code class="inline">long</code> for larger numerical values.</p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left;">
+Type      </th>
+      <th style="text-align: left;">
+Storage      </th>
+      <th style="text-align: left;">
+Range (Inclusive)      </th>
+      <th style="text-align: left;">
+Example      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left;">
+byte      </td>
+      <td style="text-align: left;">
+1 byte      </td>
+      <td style="text-align: left;">
+-128 to 127      </td>
+      <td style="text-align: left;">
+byte b = 127;      </td>
+    </tr>
+    <tr>
+      <td style="text-align: left;">
+short      </td>
+      <td style="text-align: left;">
+2 bytes      </td>
+      <td style="text-align: left;">
+–32,768 to 32,767      </td>
+      <td style="text-align: left;">
+short s = 30000; short s1 = -32_000;      </td>
+    </tr>
+    <tr>
+      <td style="text-align: left;">
+<strong>int</strong>      </td>
+      <td style="text-align: left;">
+4 bytes      </td>
+      <td style="text-align: left;">
+–2,147,483,648 to 2,147,483, 647 (just over 2 billion)      </td>
+      <td style="text-align: left;">
+int i = 20;      </td>
+    </tr>
+    <tr>
+      <td style="text-align: left;">
+<strong>long</strong>      </td>
+      <td style="text-align: left;">
+8 bytes      </td>
+      <td style="text-align: left;">
+–9,223,372,036,854,775,808 to 9,223,372,036,854,775,807      </td>
+      <td style="text-align: left;">
+long l = 100; long l1 = 100L; long l2 = 100l;      </td>
+    </tr>
+  </tbody>
+</table>
+<p>
+In terms of how the system will store the data of the receipt, the system can use <code class="inline">int</code> to denote the quantity of each line item and the table number. Similarly, <code class="inline">long</code> is more suitable for the check number as this number may get get big.</p>
+<br>
+<h3>
+Decimals</h3>
+<p>
+Numbers with fractions can be represented with float or double.</p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left;">
+Type      </th>
+      <th style="text-align: left;">
+Storage requirements      </th>
+      <th style="text-align: left;">
+Range (Inclusive)      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left;">
+float      </td>
+      <td style="text-align: left;">
+4 bytes      </td>
+      <td style="text-align: left;">
+Approximately ±3.40282347E+38F (6–7 significant decimal digits)      </td>
+    </tr>
+    <tr>
+      <td style="text-align: left;">
+<strong>double</strong>      </td>
+      <td style="text-align: left;">
+8 bytes      </td>
+      <td style="text-align: left;">
+Approximately ±1.79769313486231570E+308 (15 significant decimal digits)      </td>
+    </tr>
+  </tbody>
+</table>
+<p>
+Developers generally uses <code class="inline">double</code> because it is more precise than float. Within the context of the receipt of our application, we can use double to represent money. However, in real life, <code class="inline">BigDecimal</code> is a class used to represent money due to rounding errors with double. We will talk about <code class="inline">class</code> in a later module.</p>
+
+<h3>
+char</h3>
+<p>
+The char type is a single character, such as letters, digits, punctuation marks, or special symbols. The term <code class="inline">char</code> is short for <code class="inline">character</code>. It is enclosed in single quotes. It takes up 2 bytes.</p>
+<pre><code>char a = &#39;a&#39;;
+char capA = &#39;A&#39;;
+char semi = &#39;;&#39;;
+char num = &#39;8&#39;;</code></pre>
+<p>
+Note <code class="inline">&#39;8&#39;</code> is NOT the same as the number <code class="inline">8</code> without the quotes. <code class="inline">&#39;8&#39;</code> with quote is a char and <code class="inline">8</code> is an int.</p>
+<p>
+Within the context of the receipt, characters can combine together to make up long text such as the drink name (Cold Brew) or the cashier name (James Smith).</p>
+<h3>
+boolean</h3>
+<p>
+A boolean represents logical values. It can only be <code class="inline">true</code> or <code class="inline">false</code>. Booleans are fundamental in the control flow of the program, as they determine the outcome of conditional statements and loops.</p>
+<pre><code>boolean t = true;
+boolean f = false;</code></pre>
+<p>
+It can be used to store the result of a comparison as these produce either a true or false result.</p>
+<pre><code>boolean a = 1 &gt; 0; // true
+boolean b = 1 &gt; 5; // false
+boolean c = 1 == 1; // true
+boolean d = 1 &gt;= 5; // false
+boolean e = 1 &lt;= 5; // true
+boolean f = 8 == &#39;8&#39;; // false</code></pre>
+<p>
+For example, in the cafe system, a boolean can be used to indicate if a table paid or not because there are only two state paid (true) and not paid (false).</p>
+<br>
+<h2>
+Summary</h2>
+<p>
+Data type is a way for the computer to understand what the data represent (e.g. number, character). It also lets the computer knows how much storage to allocate for the data. For whole number, int and long is used most often. For decimal, double is used for better precision. Char is used for text. Boolean is used for logical values (true/false). Figure 2 marked a few data types that can be used to represent the information needed for a receipt.</p>
+<div class="lesson-image">
+    <img src="/images/receipt_data.png" width="300px">
+  <p>Figure 2: Sample receipt with some data mark</p></div>
+<div class="lesson-actions">
+    <button class="lesson-next">
+  <a href="/lessons/variables">Next: Variables</a>
+  </button>
+</div>
