@@ -107,8 +107,8 @@ button {
 }
 
 .lesson-image {
-  text-align: center;
-  place-content: center;
+  text-align: left;
+  place-content: left;
 }
 
 .lesson-image p {
