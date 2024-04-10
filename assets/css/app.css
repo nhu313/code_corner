@@ -158,3 +158,16 @@ strong {
   list-style: auto;
   padding-left: 15px;
 }
+
+.practice-submit {
+  color: white !important;
+  font-weight: 600;
+  background-color: #007396;
+  padding: 5px 15px;
+  margin-left: 5px;
+  text-transform: uppercase;
+}
+
+.practice-submit:hover {
+  background-color: #444;
+}
