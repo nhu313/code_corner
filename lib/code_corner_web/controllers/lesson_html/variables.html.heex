@@ -79,6 +79,7 @@
   Or like above, if the price is unknown, it can be declared with:
 </p>
 <pre><code class="java">double price;</code></pre>
+<%= if @current_user do %>
 <h3>
   Let’s practice:
 </h3>
@@ -103,6 +104,7 @@
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 8, "user_id" => @current_user.id}) %>
   </li>
 </ol>
+<% end  %>
 <h2>
   Updating a variable
 </h2>
@@ -118,6 +120,7 @@ total = 3.75; // set total to 3.75</code></pre>
 total = 3.75; // set total to 3.75
 total = total + 8; // update total to previous value (3.75) + 8, total is 11.75
 total = total + 3.25; // update total to previous value (11.75) + 3.25, total is 15.0</code></pre>
+<%= if @current_user do %>
 <p>
   Let’s practice:
 </p>
@@ -151,6 +154,7 @@ int total = 25;</code></pre>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 12, "user_id" => @current_user.id}) %>
   </li>
 </ol>
+<% end  %>
 
 <h3>
   Redeclaring a variable
