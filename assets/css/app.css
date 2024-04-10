@@ -71,7 +71,7 @@ p {
   font-size: 24px;
 }
 
-.sidebar .checked {
+.sidebar .checked, .answer-check {
   color: #52BE4F;
   background-color: white;
 }
@@ -177,7 +177,7 @@ strong {
   background-color: #444;
 }
 
-input.practice-input[type="text"]  {
+input.practice-input[type="text"], textarea.practice-input  {
   height: auto;
   font-size: 12px;
   min-width: 350px;
@@ -190,4 +190,14 @@ code.inline {
 
 code {
   margin-bottom: 10px;
+}
+
+.answer-check {
+  margin-top: 23px;
+  font-size: 22px;
+  margin-left: 5px;
+}
+
+.xmark {
+  color: rgb(220 38 38);
 }

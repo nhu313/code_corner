@@ -4,8 +4,8 @@ defmodule CodeCorner.Repo.Migrations.CreateSubmissions do
   def change do
     create table(:submissions) do
       add :user_id, :integer
-      add :practice_id, :integer
-      add :input, :string
+      add :problem_id, :integer
+      add :answer, :string
 
       timestamps(type: :utc_datetime)
     end

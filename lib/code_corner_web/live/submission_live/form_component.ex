@@ -20,8 +20,8 @@ defmodule CodeCornerWeb.SubmissionLive.FormComponent do
         phx-submit="save"
       >
         <.input field={@form[:user_id]} type="number" label="User" />
-        <.input field={@form[:practice_id]} type="number" label="Practice" />
-        <.input field={@form[:input]} type="text" label="Input" />
+        <.input field={@form[:problem_id]} type="number" label="Problem Id" />
+        <.input field={@form[:answer]} type="text" label="answer" />
         <:actions>
           <.button phx-disable-with="Saving...">Save Submission</.button>
         </:actions>

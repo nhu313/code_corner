@@ -24,7 +24,7 @@ CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 6, description: "Decla
 CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 7, description: "Declare a variable type int named count to indicate the number of customer served.", lesson_id: 2, group: "variable_no_value", answer: "intcount"})
 CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 8, description: "Declare a variable named check of the type integer.", lesson_id: 2, group: "variable_no_value", answer: "intcheck"})
 # update
-CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 9, description: "Given the code below, update the count to 2.", lesson_id: 2, group: "variable_update", answer: "count=2 count=count+1"})
+CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 9, description: "Given the code below, update the count to 2.", lesson_id: 2, group: "variable_update", answer: "count=2 count=count+1 count++ count+=1"})
 CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 10, description: "Given the code below, update the total to equal to subtotal plus tax.", lesson_id: 2, group: "variable_update", answer: "total=subtotal+tax total=tax+subtotal"})
 CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 11, description: "Given the code below, update the payment (for each person) to equal to the total / 3.", lesson_id: 2, group: "variable_update", answer: "total=payment/3"})
 CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 12, description: "Given the code below, update the total to equal to subtotal.", lesson_id: 2, group: "variable_update", answer: "total=subtotal"})

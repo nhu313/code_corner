@@ -15,6 +15,10 @@ mix phx.gen.html Class QuizResult quiz_results quiz_id:integer student_id:intege
 mix phx.gen.live Accounts User users name:string age:integer
 ```
 ```
-mix phx.gen.live Practices Submission submissions user_id:integer practice_id:integer input:string
+mix phx.gen.live Practices Submission submissions user_id:integer problem_id:integer answer:string
 mix phx.gen.live Practices Problem problems lesson_id:integer description:string answer:string
 ```
+
+<i class="fa fa-circle-check checkmark checked"></i>
+      <i class="fa fa-circle-check checkmark checked answer-check"></i>
+      <i class="fa fa-circle-xmark checkmark answer-check xmark"></i>

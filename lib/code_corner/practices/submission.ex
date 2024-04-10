@@ -3,9 +3,9 @@ defmodule CodeCorner.Practices.Submission do
   import Ecto.Changeset
 
   schema "submissions" do
-    field :input, :string
+    field :answer, :string
     field :user_id, :integer
-    field :practice_id, :integer
+    field :problem_id, :integer
 
     timestamps(type: :utc_datetime)
   end
@@ -13,7 +13,7 @@ defmodule CodeCorner.Practices.Submission do
   @doc false
   def changeset(submission, attrs) do
     submission
-    |> cast(attrs, [:user_id, :practice_id, :input])
-    |> validate_required([:user_id, :practice_id, :input])
+    |> cast(attrs, [:user_id, :problem_id, :answer])
+    |> validate_required([:user_id, :problem_id, :answer])
   end
 end
