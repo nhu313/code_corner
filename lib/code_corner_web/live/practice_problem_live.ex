@@ -4,8 +4,8 @@ defmodule CodeCornerWeb.PracticeProblemLive do
   def render(assigns) do
     ~H"""
     <div class="flex items-center mx-auto">
-      <input type="text" class="bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter code" />
-      <button type="submit" class="practice-submit" phx-click="submit_answer">
+      <input type="text" name="answer" class="bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter code" />
+      <button type="submit" class="practice-submit" phx-click="submit_answer" phx-target="@myself">
         Submit
       </button>
     </div>
@@ -13,7 +13,7 @@ defmodule CodeCornerWeb.PracticeProblemLive do
   end
 
   def mount(_params, _session, socket) do
-    {:ok, socket}
+    {:ok, assign(socket, submission: CodeCorner.Practices.Submission)}
   end
 
   def handle_event("submit_answer", wat, socket) do
