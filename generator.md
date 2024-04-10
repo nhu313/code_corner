@@ -16,5 +16,5 @@ mix phx.gen.live Accounts User users name:string age:integer
 ```
 ```
 mix phx.gen.live Practices Submission submissions user_id:integer practice_id:integer input:string
-mix phx.gen.live Practices Problem problems lesson_id:integer answer:string
+mix phx.gen.live Practices Problem problems lesson_id:integer description:string answer:string
 ```

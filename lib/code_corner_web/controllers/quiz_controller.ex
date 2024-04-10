@@ -9,6 +9,14 @@ defmodule CodeCornerWeb.QuizController do
     render(conn, :index, quizzes: quizzes)
   end
 
+  def pre_quiz(conn, _params) do
+    render(conn, :pre_quiz)
+  end
+
+  def post_quiz(conn, _params) do
+    render(conn, :post_quiz)
+  end
+
   def new(conn, _params) do
     changeset = Class.change_quiz(%Quiz{})
     render(conn, :new, changeset: changeset)
