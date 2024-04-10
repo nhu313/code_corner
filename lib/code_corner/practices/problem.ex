@@ -6,6 +6,7 @@ defmodule CodeCorner.Practices.Problem do
     field :description, :string
     field :lesson_id, :integer
     field :answer, :string
+    field :group, :string
 
     timestamps(type: :utc_datetime)
   end
