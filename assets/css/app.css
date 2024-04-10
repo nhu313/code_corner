@@ -157,6 +157,7 @@ strong {
 .ordered-list {
   list-style: auto;
   padding-left: 15px;
+  margin-bottom: 10px;
 }
 
 .practice-submit {

@@ -5,7 +5,7 @@ defmodule CodeCorner.Class.Lesson do
   schema "lessons" do
     field :name, :string
     field :order, :integer
-    field :view, :string
+    field :slug, :string
     field :completed, :boolean, virtual: true
 
     timestamps(type: :utc_datetime)
@@ -14,7 +14,7 @@ defmodule CodeCorner.Class.Lesson do
   @doc false
   def changeset(lesson, attrs) do
     lesson
-    |> cast(attrs, [:order, :name, :view])
-    |> validate_required([:order, :name, :view])
+    |> cast(attrs, [:order, :name, :slug])
+    |> validate_required([:order, :name, :slug])
   end
 end

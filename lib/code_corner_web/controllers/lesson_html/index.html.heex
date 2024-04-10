@@ -8,9 +8,10 @@
 </.header>
 
 <.table id="lessons" rows={@lessons} row_click={&JS.navigate(~p"/lessons/#{&1}")}>
+  <:col :let={lesson} label="id"><%= lesson.id %></:col>
   <:col :let={lesson} label="Order"><%= lesson.order %></:col>
   <:col :let={lesson} label="Name"><%= lesson.name %></:col>
-  <:col :let={lesson} label="View"><%= lesson.view %></:col>
+  <:col :let={lesson} label="slug"><%= lesson.slug %></:col>
   <:action :let={lesson}>
     <div class="sr-only">
       <.link navigate={~p"/lessons/#{lesson}"}>Show</.link>

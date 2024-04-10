@@ -5,7 +5,7 @@ defmodule CodeCorner.Repo.Migrations.CreateLessons do
     create table(:lessons) do
       add :order, :integer
       add :name, :string
-      add :view, :string
+      add :slug, :string
 
       timestamps(type: :utc_datetime)
     end
