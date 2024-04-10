@@ -9,3 +9,12 @@ mix phx.gen.html Class QuizResult quiz_results quiz_id:integer student_id:intege
       resources "/quizzes", QuizController
   resources "/quiz_results", QuizResultController
 ```
+
+
+```
+mix phx.gen.live Accounts User users name:string age:integer
+```
+```
+mix phx.gen.live Practices Submission submissions user_id:integer practice_id:integer input:string
+mix phx.gen.live Practices Problem problems lesson_id:integer answer:string
+```

@@ -1,25 +1,26 @@
 defmodule CodeCornerWeb.PracticeProblemLive do
   use CodeCornerWeb, :live_view
 
+  attr :problem_id, :string, default: nil
   def render(assigns) do
     ~H"""
-    <div class="flex items-center mx-auto">
-      <input type="text" name="answer" class="bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter code" />
-      <button type="submit" class="practice-submit" phx-click="submit_answer" phx-target="@myself">
-        Submit
-      </button>
-    </div>
+    <.one_input_form for={@form} phx-submit="submit_answer" class="flex align-top mx-auto">
+      <.input type="text" field={@form[:answer]} placeholder="Enter code" class="practice-input"/>
+      <.button class="practice-submit">Submit</.button>
+    </.one_input_form>
     """
   end
 
-  def mount(_params, _session, socket) do
-    {:ok, assign(socket, submission: CodeCorner.Practices.Submission)}
+  def mount(_params, session, socket) do
+    form_fields = %{"answer" => "", "problem_id" => session["problem_id"]}
+    {:ok, assign(socket, :form, to_form(form_fields))}
   end
 
-  def handle_event("submit_answer", wat, socket) do
-    IO.inspect wat
+  def handle_event("submit_answer", params, socket) do
+    IO.inspect params
     IO.inspect socket
     IO.puts '---------------------------submit answer'
-    {:reply, %{"status": "failed"}, socket}
+    form = to_form(params, errors: [])
+    {:reply, %{status: 'ok'}, assign(socket, :form, form)}
   end
 end

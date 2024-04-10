@@ -212,6 +212,39 @@ defmodule CodeCornerWeb.CoreComponents do
     """
   end
 
+    @doc """
+  Renders a simple form.
+
+  ## Examples
+
+      <.simple_form for={@form} phx-change="validate" phx-submit="save">
+        <.input field={@form[:email]} label="Email"/>
+        <.input field={@form[:username]} label="Username" />
+        <:actions>
+          <.button>Save</.button>
+        </:actions>
+      </.simple_form>
+  """
+  attr :for, :any, required: true, doc: "the datastructure for the form"
+  attr :as, :any, default: nil, doc: "the server side parameter to collect all input under"
+
+  attr :rest, :global,
+    include: ~w(autocomplete name rel action enctype method novalidate target multipart),
+    doc: "the arbitrary HTML attributes to apply to the form tag"
+
+  slot :inner_block, required: true
+  slot :actions, doc: "the slot for form actions, such as a submit button"
+  def one_input_form(assigns) do
+    ~H"""
+    <.form :let={f} for={@for} as={@as} {@rest}>
+      <%= render_slot(@inner_block, f) %>
+      <div :for={action <- @actions}>
+        <%= render_slot(action, f) %>
+      </div>
+    </.form>
+    """
+  end
+
   @doc """
   Renders a button.
 
@@ -271,6 +304,7 @@ defmodule CodeCornerWeb.CoreComponents do
   attr :name, :any
   attr :label, :string, default: nil
   attr :value, :any
+  attr :class, :string, default: ""
 
   attr :type, :string,
     default: "text",
@@ -367,6 +401,7 @@ defmodule CodeCornerWeb.CoreComponents do
   end
 
   # All other inputs text, datetime-local, url, password, etc. are handled here...
+
   def input(assigns) do
     ~H"""
     <div phx-feedback-for={@name}>
@@ -380,7 +415,8 @@ defmodule CodeCornerWeb.CoreComponents do
           "mt-2 block w-full rounded-lg text-zinc-900 focus:ring-0 sm:text-sm sm:leading-6",
           "phx-no-feedback:border-zinc-300 phx-no-feedback:focus:border-zinc-400",
           @errors == [] && "border-zinc-300 focus:border-zinc-400",
-          @errors != [] && "border-rose-400 focus:border-rose-400"
+          @errors != [] && "border-rose-400 focus:border-rose-400",
+          @class
         ]}
         {@rest}
       />
