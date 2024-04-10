@@ -1,0 +1,28 @@
+<.header>
+  Problem <%= @problem.id %>
+  <:subtitle>This is a problem record from your database.</:subtitle>
+  <:actions>
+    <.link patch={~p"/problems/#{@problem}/show/edit"} phx-click={JS.push_focus()}>
+      <.button>Edit problem</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.list>
+  <:item title="Lesson"><%= @problem.lesson_id %></:item>
+  <:item title="Description"><%= @problem.description %></:item>
+  <:item title="Answer"><%= @problem.answer %></:item>
+</.list>
+
+<.back navigate={~p"/problems"}>Back to problems</.back>
+
+<.modal :if={@live_action == :edit} id="problem-modal" show on_cancel={JS.patch(~p"/problems/#{@problem}")}>
+  <.live_component
+    module={CodeCornerWeb.ProblemLive.FormComponent}
+    id={@problem.id}
+    title={@page_title}
+    action={@live_action}
+    problem={@problem}
+    patch={~p"/problems/#{@problem}"}
+  />
+</.modal>

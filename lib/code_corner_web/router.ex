@@ -58,6 +58,20 @@ defmodule CodeCornerWeb.Router do
       on_mount: [{CodeCornerWeb.UserAuth, :ensure_authenticated}] do
       live "/users/settings", UserSettingsLive, :edit
       live "/users/settings/confirm_email/:token", UserSettingsLive, :confirm_email
+
+      live "/problems", ProblemLive.Index, :index
+      live "/problems/new", ProblemLive.Index, :new
+      live "/problems/:id/edit", ProblemLive.Index, :edit
+
+      live "/problems/:id", ProblemLive.Show, :show
+      live "/problems/:id/show/edit", ProblemLive.Show, :edit
+
+      live "/submissions", SubmissionLive.Index, :index
+      live "/submissions/new", SubmissionLive.Index, :new
+      live "/submissions/:id/edit", SubmissionLive.Index, :edit
+
+      live "/submissions/:id", SubmissionLive.Show, :show
+      live "/submissions/:id/show/edit", SubmissionLive.Show, :edit
     end
 
     resources "/quiz_results", QuizResultController
@@ -76,6 +90,7 @@ defmodule CodeCornerWeb.Router do
 
     get "/lessons/variables", LessonController, :variables
     get "/lessons/data_types", LessonController, :data_types
+    get "/lessons/string", LessonController, :string
     resources "/lessons", LessonController
 
     resources "/quizzes", QuizController

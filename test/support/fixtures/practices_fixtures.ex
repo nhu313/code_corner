@@ -19,4 +19,20 @@ defmodule CodeCorner.PracticesFixtures do
 
     submission
   end
+
+  @doc """
+  Generate a problem.
+  """
+  def problem_fixture(attrs \\ %{}) do
+    {:ok, problem} =
+      attrs
+      |> Enum.into(%{
+        answer: "some answer",
+        description: "some description",
+        lesson_id: 42
+      })
+      |> CodeCorner.Practices.create_problem()
+
+    problem
+  end
 end

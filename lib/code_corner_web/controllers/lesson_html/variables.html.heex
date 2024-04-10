@@ -1,200 +1,190 @@
-<div id="app">
-  <h1>
-    Variables
-  </h1>
-  <p>
-    A variable is a name given to a value. We use a variable when we don’t know what the input is going to be. For example, a customer name for the order is going to change depending on the customer, therefore, we need a way to refer to it in the system. We can use a variable to do so. A variable is also used when we need to refer to it multiple times, like the receipt total. To declare a variable, you need:
-  </p>
-  <ol class="ordered-list">
-    <li>Type</li>
-    <li>Variable name</li>
-    <li>Value</li>
-    <li>semicolon (;)</li>
-  </ol>
-  <br />
-  <p>
-    For example, here’s how to declare or create a variable named
-    <code class="inline">quantity</code>
-    with the value of <code class="inline">1</code>:
-  </p>
-  <div class="lesson-image">
-    <img src="/images/variable.png" width="300px" />
-    <p>Figure 1: Declare a variable in Java</p>
-  </div>
-  <p>
-    Here’s how to declare a variable named <code class="inline">price</code>
-    with the value of <code class="inline">3.75</code>.
-  </p>
-  <pre><code class="java">double price = 3.75;</code></pre>
-  <br />
-  <h3>
-    Let’s practice!
-  </h3>
-  <ol>
-    <li>
-      <p>
-        Declare/Create a variable name total with the value of 23.87.
-      </p>
-      <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 12}) %>
-      <p>
-        <code class="inline">double total = 23.87;</code>
-      </p>
-    </li>
-    <li>
-      <p>
-        Declare/Create a variable name table with the value of 6.
-      </p>
-      <p>
-        <code class="inline">int table = 6;</code>
-      </p>
-    </li>
-    <li>
-      <p>
-        Declare/Create a variable name year with the value of 204
-      </p>
-      <p>
-        <code class="inline">int year = 2024;</code>
-      </p>
-    </li>
-    <li>
-      <p>
-        Declare/Create a variable name tax with the value 1.37
-      </p>
-      <p>
-        <code class="inline">double tax = 1.37;</code>
-      </p>
-    </li>
-  </ol>
-  <h2>
-    Variable without a value
-  </h2>
-  <p>
-    Sometimes the variable value is unknown because it needs the user input. In that case, the variable can be declared without a valude with:
-  </p>
-  <ol class="ordered-list">
-    <li>Type</li>
-    <li>Variable name</li>
-    <li>semicolon (;)</li>
-  </ol>
-  <br />
-  <p>
-    This is how to declare a variable of type int named <code class="inline">quantity</code>
-    without a value:
-  </p>
-  <pre><code class="java">int quantity;</code></pre>
-  <p>
-    Or like above, if the price is unknown, it can be declared with:
-  </p>
-  <pre><code class="java">double price;</code></pre>
-  <h3>
-    Let’s practice:
-  </h3>
-  <ol>
-    <li>
-      Declare a variable type boolean with the name <code class="inline">paid</code>
-      to indicate if a table paid their tab.
-    </li>
-    <li>
-      Declare a variable named <code class="inline">initial</code>
-      to indicate the server first name initial (one character).
-    </li>
-    <li>
-      Declare a variable named <code class="inline">count</code>
-      to indicate the number of customer served.
-    </li>
-    <li>
-      Declare a variable named <code class="inline">check</code> of the type integer.
-    </li>
-  </ol>
-  <h2>
-    Updating a variable
-  </h2>
-  <p>
-    To update a variable, simply set it to a new value.
-  </p>
-  <pre><code class="java">int total = 0;
+<h1>
+  Variables
+</h1>
+<p>
+  A variable is a name given to a value. We use a variable when we don’t know what the input is going to be. For example, a customer name for the order is going to change depending on the customer, therefore, we need a way to refer to it in the system. We can use a variable to do so. A variable is also used when we need to refer to it multiple times, like the receipt total. To declare a variable, you need:
+</p>
+<ol class="ordered-list">
+  <li>Type</li>
+  <li>Variable name</li>
+  <li>Value</li>
+  <li>semicolon (;)</li>
+</ol>
+<br />
+<p>
+  For example, here’s how to declare or create a variable named
+  <code class="inline">quantity</code>
+  with the value of <code class="inline">1</code>:
+</p>
+<div class="lesson-image">
+  <img src="/images/variable.png" width="300px" />
+  <p>Figure 1: Declare a variable in Java</p>
+</div>
+<p>
+  Here’s how to declare a variable named <code class="inline">price</code>
+  with the value of <code class="inline">3.75</code>.
+</p>
+<pre><code class="java">double price = 3.75;</code></pre>
+<br />
+<h3>
+  Let’s practice!
+</h3>
+<ol>
+  <li>
+    <p>
+      Declare/Create a variable name total with the value of 23.87.
+    </p>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 12}) %>
+    <p>
+      <code class="inline">double total = 23.87;</code>
+    </p>
+  </li>
+  <li>
+    <p>
+      Declare/Create a variable name table with the value of 6.
+    </p>
+    <p>
+      <code class="inline">int table = 6;</code>
+    </p>
+  </li>
+  <li>
+    <p>
+      Declare/Create a variable name year with the value of 204
+    </p>
+    <p>
+      <code class="inline">int year = 2024;</code>
+    </p>
+  </li>
+  <li>
+    <p>
+      Declare/Create a variable name tax with the value 1.37
+    </p>
+    <p>
+      <code class="inline">double tax = 1.37;</code>
+    </p>
+  </li>
+</ol>
+<h2>
+  Variable without a value
+</h2>
+<p>
+  Sometimes the variable value is unknown because it needs the user input. In that case, the variable can be declared without a valude with:
+</p>
+<ol class="ordered-list">
+  <li>Type</li>
+  <li>Variable name</li>
+  <li>semicolon (;)</li>
+</ol>
+<br />
+<p>
+  This is how to declare a variable of type int named <code class="inline">quantity</code>
+  without a value:
+</p>
+<pre><code class="java">int quantity;</code></pre>
+<p>
+  Or like above, if the price is unknown, it can be declared with:
+</p>
+<pre><code class="java">double price;</code></pre>
+<h3>
+  Let’s practice:
+</h3>
+<ol>
+  <li>
+    Declare a variable type boolean with the name <code class="inline">paid</code>
+    to indicate if a table paid their tab.
+  </li>
+  <li>
+    Declare a variable named <code class="inline">initial</code>
+    to indicate the server first name initial (one character).
+  </li>
+  <li>
+    Declare a variable named <code class="inline">count</code>
+    to indicate the number of customer served.
+  </li>
+  <li>
+    Declare a variable named <code class="inline">check</code> of the type integer.
+  </li>
+</ol>
+<h2>
+  Updating a variable
+</h2>
+<p>
+  To update a variable, simply set it to a new value.
+</p>
+<pre><code class="java">int total = 0;
 total = 3.75; // set total to 3.75</code></pre>
-  <p>
-    The variable can reference itself. For example:
-  </p>
-  <pre><code>int total;
+<p>
+  The variable can reference itself. For example:
+</p>
+<pre><code>int total;
 total = 3.75; // set total to 3.75
 total = total + 8; // update total to previous value (3.75) + 8, total is 11.75
 total = total + 3.25; // update total to previous value (11.75) + 3.25, total is 15.0</code></pre>
-  <p>
-    Let’s practice:
-  </p>
-  <ol>
-    <li>
-      <p>
-        Given the code below, update the count to 2.
-      </p>
-      <pre><code class="java"> int count = 1;
- //answer
- count = 2;
- count = count + 1;</code></pre>
-    </li>
-    <li>
-      <p>
-        Given the code below, update the total to equal to subtotal plus tax.
-      </p>
-    </li>
-  </ol>
-  <pre><code class="java">double total;
+<p>
+  Let’s practice:
+</p>
+<ol>
+  <li>
+    <p>
+      Given the code below, update the count to 2.
+    </p>
+    <pre><code class="java"> int count = 1;
+//answer
+count = 2;
+count = count + 1;</code></pre>
+  </li>
+  <li>
+    <p>
+      Given the code below, update the total to equal to subtotal plus tax.
+    </p>
+  </li>
+</ol>
+<pre><code class="java">double total;
 double subtotal = 22.50;
 double tax = 1.37;
 //answer
 total = subtotal + tax;</code></pre>
-  <ol>
-    <li>
-      Given the code below, update the payment (for each person) to equal to the total / 3.
-    </li>
-  </ol>
-  <pre><code class="java">double payment;
+<ol>
+  <li>
+    Given the code below, update the payment (for each person) to equal to the total / 3.
+  </li>
+</ol>
+<pre><code class="java">double payment;
 double total = 23.87;
 
 //answer
 total = payment/3;</code></pre>
-  <ol>
-    <li>
-      Given the code below, update the total to equal to subtotal.
-    </li>
-  </ol>
-  <pre><code class="java">int subtotal = 22;
+<ol>
+  <li>
+    Given the code below, update the total to equal to subtotal.
+  </li>
+</ol>
+<pre><code class="java">int subtotal = 22;
 int total = 25;
 
 total = subtotal;</code></pre>
-  <h3>
-    Redeclaring a variable
-  </h3>
-  <p>
-    You can’t! Once a variable is declared, it can’t be redeclared. Nor can another variable reuse the name.
-  </p>
-  <pre><code class="java">int x = 16;
+<h3>
+  Redeclaring a variable
+</h3>
+<p>
+  You can’t! Once a variable is declared, it can’t be redeclared. Nor can another variable reuse the name.
+</p>
+<pre><code class="java">int x = 16;
 int x = 100; // ERROR!
 double x = 1.1; // ERROR!</code></pre>
-  <p>
-    If you need to update the value, don’t put the type at the beginning.
-  </p>
-  <pre><code>int total = 22;
+<p>
+  If you need to update the value, don’t put the type at the beginning.
+</p>
+<pre><code>int total = 22;
 total = 23;</code></pre>
-  <h2>
-    Naming
-  </h2>
-  <p>
-    Variable name should start with lower case. Each word after the first word should be capitalized with no space in between. For example, if you want to have a variable to store the number of customer, you can name the variable as
-    <code class="inline">int customerCount</code>
-  </p>
-</div>
-<script>
-  const { createApp, ref } = Vue
+<h2>
+  Naming
+</h2>
+<p>
+  Variable name should start with lower case. Each word after the first word should be capitalized with no space in between. For example, if you want to have a variable to store the number of customer, you can name the variable as
+  <code class="inline">int customerCount</code>
+</p>
 
-  createApp({
-    setup() {
-      const message = ref('Hello vue!')
-      return {
-        message
-      }
-    }
-  }).mount('#app')
-</script>
+  <button class="rounded-lg hover:bg-zinc-700 active:text-white/80 primary-btn lesson-next">
+    <a href="/lessons/string">Next: String</a>
+  </button>

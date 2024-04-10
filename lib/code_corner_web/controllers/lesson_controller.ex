@@ -17,6 +17,10 @@ defmodule CodeCornerWeb.LessonController do
     render(conn, :data_types)
   end
 
+  def string(conn, _params) do
+    render(conn, :string)
+  end
+
   def new(conn, _params) do
     changeset = Class.change_lesson(%Lesson{})
     render(conn, :new, changeset: changeset)

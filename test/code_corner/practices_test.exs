@@ -60,4 +60,62 @@ defmodule CodeCorner.PracticesTest do
       assert %Ecto.Changeset{} = Practices.change_submission(submission)
     end
   end
+
+  describe "problems" do
+    alias CodeCorner.Practices.Problem
+
+    import CodeCorner.PracticesFixtures
+
+    @invalid_attrs %{description: nil, lesson_id: nil, answer: nil}
+
+    test "list_problems/0 returns all problems" do
+      problem = problem_fixture()
+      assert Practices.list_problems() == [problem]
+    end
+
+    test "get_problem!/1 returns the problem with given id" do
+      problem = problem_fixture()
+      assert Practices.get_problem!(problem.id) == problem
+    end
+
+    test "create_problem/1 with valid data creates a problem" do
+      valid_attrs = %{description: "some description", lesson_id: 42, answer: "some answer"}
+
+      assert {:ok, %Problem{} = problem} = Practices.create_problem(valid_attrs)
+      assert problem.description == "some description"
+      assert problem.lesson_id == 42
+      assert problem.answer == "some answer"
+    end
+
+    test "create_problem/1 with invalid data returns error changeset" do
+      assert {:error, %Ecto.Changeset{}} = Practices.create_problem(@invalid_attrs)
+    end
+
+    test "update_problem/2 with valid data updates the problem" do
+      problem = problem_fixture()
+      update_attrs = %{description: "some updated description", lesson_id: 43, answer: "some updated answer"}
+
+      assert {:ok, %Problem{} = problem} = Practices.update_problem(problem, update_attrs)
+      assert problem.description == "some updated description"
+      assert problem.lesson_id == 43
+      assert problem.answer == "some updated answer"
+    end
+
+    test "update_problem/2 with invalid data returns error changeset" do
+      problem = problem_fixture()
+      assert {:error, %Ecto.Changeset{}} = Practices.update_problem(problem, @invalid_attrs)
+      assert problem == Practices.get_problem!(problem.id)
+    end
+
+    test "delete_problem/1 deletes the problem" do
+      problem = problem_fixture()
+      assert {:ok, %Problem{}} = Practices.delete_problem(problem)
+      assert_raise Ecto.NoResultsError, fn -> Practices.get_problem!(problem.id) end
+    end
+
+    test "change_problem/1 returns a problem changeset" do
+      problem = problem_fixture()
+      assert %Ecto.Changeset{} = Practices.change_problem(problem)
+    end
+  end
 end
