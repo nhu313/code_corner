@@ -10,6 +10,7 @@ defmodule CodeCorner.Accounts.User do
     field :password, :string, virtual: true, redact: true
     field :hashed_password, :string, redact: true
     field :confirmed_at, :naive_datetime
+    field :years_of_experience, :string
 
     timestamps(type: :utc_datetime)
   end
@@ -39,7 +40,7 @@ defmodule CodeCorner.Accounts.User do
   """
   def registration_changeset(user, attrs, opts \\ []) do
     user
-    |> cast(attrs, [:email, :password, :name, :admin, :experiment])
+    |> cast(attrs, [:email, :password, :name, :admin, :experiment, :years_of_experience])
     |> validate_email(opts)
     |> validate_name()
     |> validate_password(opts)

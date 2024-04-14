@@ -6,4 +6,8 @@
 
 <h3>Let's get started!</h3>
 
-<a href="/quizzes/pre_quiz"><button class="rounded-lg hover:bg-zinc-700 active:text-white/80 primary-btn lesson-next">Take the Pre Quiz</button></a>
+<%= if @current_user do %>
+  <a href="/users/register"><button class="rounded-lg hover:bg-zinc-700 active:text-white/80 primary-btn lesson-next">Create an account</button></a>
+<% else %>
+  <a href="/quizzes/pre_quiz"><button class="rounded-lg hover:bg-zinc-700 active:text-white/80 primary-btn lesson-next">Take the Pre Quiz</button></a>
+<% end %>
