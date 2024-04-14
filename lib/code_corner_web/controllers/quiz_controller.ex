@@ -13,6 +13,16 @@ defmodule CodeCornerWeb.QuizController do
     render(conn, :pre_quiz)
   end
 
+  def submit_pre_quiz(conn, params) do
+    # TODO
+    render(conn, :submit_pre_quiz)
+  end
+
+  def submit_post_quiz(conn, params) do
+    # TODO
+    render(conn, :submit_post_quiz)
+  end
+
   def post_quiz(conn, _params) do
     render(conn, :post_quiz)
   end
