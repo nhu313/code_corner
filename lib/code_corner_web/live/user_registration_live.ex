@@ -37,8 +37,9 @@ defmodule CodeCornerWeb.UserRegistrationLive do
         <.input
           field={@form[:years_of_experience]}
           type="select"
-          label="How long have you started coding?"
+          label="How long have you started to learn to code?"
           options={["0 - 3 months", "4 - 6 months", "7 - 11 months", "1+ years"]}
+          required
         />
         <:actions>
           <.button phx-disable-with="Creating account..." class="w-full">Create an account</.button>

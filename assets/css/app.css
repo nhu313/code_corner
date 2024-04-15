@@ -201,3 +201,11 @@ code {
 .xmark {
   color: rgb(220 38 38);
 }
+
+a {
+  color: #ea580c;
+}
+
+a:hover {
+  color: #222;
+}
