@@ -10,31 +10,37 @@
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
 
-CodeCorner.Repo.insert!(%CodeCorner.Class.Lesson{id: 1, name: "Data Types", order: 1, slug: "data_types"})
+# CodeCorner.Repo.insert!(%CodeCorner.Class.Lesson{id: 1, name: "Data Types", order: 1, slug: "data_types"})
 
-CodeCorner.Repo.insert!(%CodeCorner.Class.Lesson{id: 2, name: "Variables", order: 5, slug: "variables"})
-# simple variable
-CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 1, description: "Declare/Create a variable name total with the value of 23.87.", lesson_id: 2, group: "variable_simple", answer: "doubletotal=23.87"})
-CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 2, description: "Declare/Create a variable name table with the value of 6.", lesson_id: 2, group: "variable_simple", answer: "inttable=6"})
-CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 3, description: "Declare/Create a variable name year with the value of 2024", lesson_id: 2, group: "variable_simple", answer: "intyear=2024"})
-CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 4, description: "Declare/Create a variable name tax with the value 1.37", lesson_id: 2, group: "variable_simple", answer: "doubletax=1.37"})
-# no value
-CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 5, description: "Declare a variable type boolean with the name paid to indicate if a table paid their tab.", lesson_id: 2, group: "variable_no_value", answer: "booleanpaid"})
-CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 6, description: "Declare a variable type char named initial to indicate the server first name initial (one character).", lesson_id: 2, group: "variable_no_value", answer: "charinitial"})
-CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 7, description: "Declare a variable type int named count to indicate the number of customer served.", lesson_id: 2, group: "variable_no_value", answer: "intcount"})
-CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 8, description: "Declare a variable named check of the type integer.", lesson_id: 2, group: "variable_no_value", answer: "intcheck"})
-# update
-CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 9, description: "Given the code below, update the count to 2.", lesson_id: 2, group: "variable_update", answer: "count=2 count=count+1 count++ count+=1"})
-CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 10, description: "Given the code below, update the total to equal to subtotal plus tax.", lesson_id: 2, group: "variable_update", answer: "total=subtotal+tax total=tax+subtotal"})
-CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 11, description: "Given the code below, update the payment (for each person) to equal to the total / 3.", lesson_id: 2, group: "variable_update", answer: "total=payment/3"})
-CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 12, description: "Given the code below, update the total to equal to subtotal.", lesson_id: 2, group: "variable_update", answer: "total=subtotal"})
+# CodeCorner.Repo.insert!(%CodeCorner.Class.Lesson{id: 2, name: "Variables", order: 5, slug: "variables"})
+# # simple variable
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 1, description: "Declare/Create a variable name total with the value of 23.87.", lesson_id: 2, group: "variable_simple", answer: "doubletotal=23.87"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 2, description: "Declare/Create a variable name table with the value of 6.", lesson_id: 2, group: "variable_simple", answer: "inttable=6"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 3, description: "Declare/Create a variable name year with the value of 2024", lesson_id: 2, group: "variable_simple", answer: "intyear=2024"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 4, description: "Declare/Create a variable name tax with the value 1.37", lesson_id: 2, group: "variable_simple", answer: "doubletax=1.37"})
+# # no value
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 5, description: "Declare a variable type boolean with the name paid to indicate if a table paid their tab.", lesson_id: 2, group: "variable_no_value", answer: "booleanpaid"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 6, description: "Declare a variable type char named initial to indicate the server first name initial (one character).", lesson_id: 2, group: "variable_no_value", answer: "charinitial"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 7, description: "Declare a variable type int named count to indicate the number of customer served.", lesson_id: 2, group: "variable_no_value", answer: "intcount"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 8, description: "Declare a variable named check of the type integer.", lesson_id: 2, group: "variable_no_value", answer: "intcheck"})
+# # update
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 9, description: "Given the code below, update the count to 2.", lesson_id: 2, group: "variable_update", answer: "count=2 count=count+1 count++ count+=1"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 10, description: "Given the code below, update the total to equal to subtotal plus tax.", lesson_id: 2, group: "variable_update", answer: "total=subtotal+tax total=tax+subtotal"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 11, description: "Given the code below, update the payment (for each person) to equal to the total / 3.", lesson_id: 2, group: "variable_update", answer: "total=payment/3"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 12, description: "Given the code below, update the total to equal to subtotal.", lesson_id: 2, group: "variable_update", answer: "total=subtotal"})
 
-CodeCorner.Repo.insert!(%CodeCorner.Class.Lesson{id: 3, name: "String", order: 10, slug: "string"})
+# CodeCorner.Repo.insert!(%CodeCorner.Class.Lesson{id: 3, name: "String", order: 10, slug: "string"})
 
 
-CodeCorner.Repo.insert!(%CodeCorner.Class.Lesson{id: 4, name: "Class", order: 15, slug: "class"})
-CodeCorner.Repo.insert!(%CodeCorner.Class.Lesson{id: 5, name: "Method", order: 20, slug: "method"})
-CodeCorner.Repo.insert!(%CodeCorner.Class.Lesson{id: 6, name: "Objects", order: 25, slug: "object"})
+# CodeCorner.Repo.insert!(%CodeCorner.Class.Lesson{id: 4, name: "Class", order: 15, slug: "class"})
+# CodeCorner.Repo.insert!(%CodeCorner.Class.Lesson{id: 5, name: "Method", order: 20, slug: "method"})
+# CodeCorner.Repo.insert!(%CodeCorner.Class.Lesson{id: 6, name: "Objects", order: 25, slug: "object"})
+
+
+
+
+
+
 
 # CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 3, description: "", lesson_id: , group: "", answer: ""})
 # CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 4, description: "", lesson_id: , group: "", answer: ""})
@@ -55,3 +61,22 @@ CodeCorner.Repo.insert!(%CodeCorner.Class.Lesson{id: 6, name: "Objects", order: 
 # CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 9, description: "", lesson_id: , group: "", answer: ""})
 # CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 0, description: "", lesson_id: , group: "", answer: ""})
 # CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 1, description: "", lesson_id: , group: "", answer: ""})
+
+CodeCorner.Repo.insert!(%CodeCorner.Class.Quiz{id: 1, name: "Pre Quiz"})
+CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 1, quiz_id: 1, answer: "int", description: "What data type is the most appropriate to store the number of students in a class?"})
+CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 2, quiz_id: 1, answer: "double", description: "What data type is the most appropriate to store the student's grade point average (GPA) (e.g. 3.4, 4.0)?"})
+CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 3, quiz_id: 1, answer: "2.0", description: "What is printed when the code segment below is executed?"})
+CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 4, quiz_id: 1, answer: "x = 3, y = 6", description: "What are the values of x and y after the following code executes?"})
+CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 5, quiz_id: 1, answer: "printSlices(slicesPerPerson);", description: "Consider the following methods, which appear in the same class. Which of the following lines would go into /* INSERT CODE HERE */ in order to call the printSlices method?"})
+CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 6, quiz_id: 1, answer: "Movie m = Movie(\"Lion King\", 8.0);Movie m = new Movie(\"Lion King\");", description: "Consider the following class. Which of the following code segments will construct a Movie object m with a title of “Lion King” and rating of 8.0?"})
+CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 7, quiz_id: 1, answer: "myParty.cancelParty();", description: "Consider the following class definition. Assume that a Party object called myParty has been properly declared and initialized. Which of the following statements are valid?"})
+
+
+CodeCorner.Repo.insert!(%CodeCorner.Class.Quiz{id: 2, name: "Post Quiz"})
+CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 8, quiz_id: 2, answer: "double", description: "What data type is the most appropriate to store the price of an item?"})
+CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 9, quiz_id: 2, answer: "int", description: "What data type is the most appropriate to store the number of employees at a store?"})
+CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 10, quiz_id: 2, answer: "5.0", description: "What is printed when the code segment below is executed?"})
+CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 11, quiz_id: 2, answer: "x = 2, y = 4", description: "What are the values of x and y after the following code executes?"})
+CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 12, quiz_id: 2, answer: "printPayment(paymentPerPerson);", description: "Consider the following methods, which appear in the same class. Which of the following lines would go into /* INSERT CODE HERE */ in order to call the paymentPerPerson method?"})
+CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 13, quiz_id: 2, answer: "correct", description: "Consider the following class. Which of the following code segments will construct a Book object m with a title of \"A Tale of Two Cities\" and rating of 4.7?"})
+CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 14, quiz_id: 2, answer: "rental.returnBook();rental.checkOutBook(2);", description: "Consider the following class definition. Assume that a BookRental object called rental has been properly declared and initialized. Which of the following statements are valid?"})

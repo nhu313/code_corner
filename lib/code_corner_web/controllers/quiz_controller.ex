@@ -10,11 +10,13 @@ defmodule CodeCornerWeb.QuizController do
   end
 
   def pre_quiz(conn, _params) do
-    render(conn, :pre_quiz)
+    changeset = Class.change_quiz(%Quiz{})
+    render(conn, :pre_quiz, changeset: changeset)
   end
 
+  @spec submit_pre_quiz(Plug.Conn.t(), any()) :: Plug.Conn.t()
   def submit_pre_quiz(conn, params) do
-    # TODO
+    IO.inspect params
     render(conn, :submit_pre_quiz)
   end
 

@@ -209,3 +209,20 @@ a {
 a:hover {
   color: #222;
 }
+
+.sidebar-wrapper {
+  padding-left: 0.75rem;
+}
+
+.form-check-label {
+  color: #555;
+}
+input[type="checkbox"]+label, input[type="radio"]+label {
+  color: #555;
+}
+
+.quiz-question {
+  padding-bottom: 5px;
+  margin-bottom:15px;
+  border-bottom: 1px solid #dfdfdf;
+}

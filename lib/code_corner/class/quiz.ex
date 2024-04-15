@@ -9,6 +9,9 @@ defmodule CodeCorner.Class.Quiz do
     field :answer, :string
     field :completed, :boolean, virtual: true
 
+    has_many :questions, CodeCorner.Class.QuizQuestion, on_delete: :delete_all
+    has_many :submissions, CodeCorner.Class.QuizSubmission
+
     timestamps(type: :utc_datetime)
   end
 

@@ -1,0 +1,245 @@
+<h1>Pre Quiz</h1>
+<p>This quiz is baseline measurement of where you are. You should not know the answer to every question. This is used to measure if the lesson improved your skills.</p>
+
+<.simple_form :let={f} for={@changeset} action="/quizzes/pre_quiz">
+<ol>
+  <li class=" quiz-question">
+    <p>1. What data type is the most appropriate to store the number of employees at a store?</p>
+    <div class="form-check form-check-inline">
+      <input class="form-radio-input" type="radio" name="submissions[1][answer]" value="double" id="submission_1_answer1">
+      <label class="form-radio-label" for="submission_1_answer1">
+        double
+      </label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-radio-input" type="radio" name="submissions[1][answer]" value="int" id="submission_1_answer4">
+      <label class="form-radio-label" for="submission_1_answer4">
+        int
+      </label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-radio-input" type="radio" name="submissions[1][answer]" value="boolean" id="submission_1_answer2">
+      <label class="form-radio-label" for="submission_1_answer2">
+        boolean
+      </label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-radio-input" type="radio" name="submissions[1][answer]" value="char" id="submission_1_answer3">
+      <label class="form-radio-label" for="submission_1_answer3">
+        char
+      </label>
+    </div>
+  </li>
+
+  <li class=" quiz-question">
+    <p>2. What data type is the most appropriate to store the price of an item?</p>
+    <div class="form-check form-check-inline">
+      <input class="form-radio-input" type="radio" name="submissions[2][answer]" value="double" id="submission_2_answer1">
+      <label class="form-radio-label" for="submission_2_answer1">
+        double
+      </label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-radio-input" type="radio" name="submissions[2][answer]" value="int" id="submission_2_answer4">
+      <label class="form-radio-label" for="submission_2_answer4">
+        int
+      </label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-radio-input" type="radio" name="submissions[2][answer]" value="boolean" id="submission_2_answer2">
+      <label class="form-radio-label" for="submission_2_answer2">
+        boolean
+      </label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-radio-input" type="radio" name="submissions[2][answer]" value="char" id="submission_2_answer3">
+      <label class="form-radio-label" for="submission_2_answer3">
+        char
+      </label>
+    </div>
+  </li>
+
+  <li class=" quiz-question">
+    <p>3. What is the value of a?</p>
+    <pre><code>double a = 6.0;
+a = 2.0;</code></pre>
+    <div class="form-check form-check-inline">
+      <input class="form-radio-input" type="radio" name="submissions[3][answer]" value="2.0" id="submission_3_answer1">
+      <label class="form-radio-label" for="submission_3_answer1">
+        2.0
+      </label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-radio-input" type="radio" name="submissions[3][answer]" value="3.0" id="submission_3_answer4">
+      <label class="form-radio-label" for="submission_3_answer4">
+        3.0
+      </label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-radio-input" type="radio" name="submissions[3][answer]" value="5.0" id="submission_3_answer2">
+      <label class="form-radio-label" for="submission_3_answer2">
+        5.0
+      </label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-radio-input" type="radio" name="submissions[3][answer]" value="6.0" id="submission_3_answer3">
+      <label class="form-radio-label" for="submission_3_answer3">
+        6.0
+      </label>
+    </div>
+  </li>
+
+  <li class=" quiz-question">
+    <p>4. What are the values of x and y after the following code executes?</p>
+    <pre><code>int x = 5;
+int y = 2;
+x = y;
+y = y + 2;</code></pre>
+    <div class="form-check form-check-inline">
+      <input class="form-radio-input" type="radio" name="submissions[4][answer]" value="x = 2, y = 2" id="submission_4_answer1">
+      <label class="form-radio-label" for="submission_4_answer1">
+        x = 2, y = 2
+      </label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-radio-input" type="radio" name="submissions[4][answer]" value="x = 2, y = 4" id="submission_4_answer4">
+      <label class="form-radio-label" for="submission_4_answer4">
+        x = 2, y = 4
+      </label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-radio-input" type="radio" name="submissions[4][answer]" value="x = 5, y = 2" id="submission_4_answer2">
+      <label class="form-radio-label" for="submission_4_answer2">
+        x = 5, y = 2
+      </label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-radio-input" type="radio" name="submissions[4][answer]" value="x = 5, y = 4" id="submission_4_answer3">
+      <label class="form-radio-label" for="submission_4_answer3">
+        x = 5, y = 4
+      </label>
+    </div>
+  </li>
+
+  <li class=" quiz-question">
+    <p>5. Consider the following methods, which appear in the same class. Which of the following lines would go into /* INSERT CODE HERE */ in order to call the paymentPerPerson method?</p>
+    <pre><code>public void calculatePayment(int numOfPeople)
+{
+    double total = 100;
+    int paymentPerPerson = total/numOfPeople;
+    /* INSERT CODE HERE */
+}
+
+public void printPayment(double payment)
+{
+    System.out.println("Each person owes " + payment);
+}</code></pre>
+
+    <div class="form-check form-check-inline">
+      <input class="form-radio-input" type="radio" name="submissions[5][answer]" value="printPayment(paymentPerPerson);" id="submission_5_answer1">
+      <label class="form-radio-label" for="submission_5_answer1">
+        printPayment(paymentPerPerson);
+      </label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-radio-input" type="radio" name="submissions[5][answer]" value="printPayment(numOfPeople);" id="submission_5_answer4">
+      <label class="form-radio-label" for="submission_5_answer4">
+        printPayment(numOfPeople);
+      </label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-radio-input" type="radio" name="submissions[5][answer]" value="printPayment(100);" id="submission_5_answer2">
+      <label class="form-radio-label" for="submission_5_answer2">
+        printPayment(100);
+      </label>
+    </div>
+  </li>
+
+  <li class=" quiz-question">
+    <p>6. Consider the following class. Which of the following code segments will construct a Book object m with a title of "A Tale of Two Cities" and rating of 4.7?</p>
+    <pre><code>public class Book
+{
+    private String title;
+    private double rating;
+
+    public Book(String t, double r)
+    {
+        title = t;
+        rating = r;
+    }
+}</code></pre>
+
+    <div class="form-check form-check-inline">
+      <input class="form-radio-input" type="radio" name="submissions[6][answer]" value="wrong" id="submission_6_answer1">
+      <label class="form-radio-label" for="submission_6_answer1">
+        Movie m = new Book(4.7, "A Tale of Two Cities");
+      </label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-radio-input" type="radio" name="submissions[6][answer]" value="correct" id="submission_6_answer4">
+      <label class="form-radio-label" for="submission_6_answer4">
+        Movie m = Book("A Tale of Two Cities", 4.7);
+      </label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-radio-input" type="radio" name="submissions[6][answer]" value="wrong" id="submission_6_answer2">
+      <label class="form-radio-label" for="submission_6_answer2">
+        Book m = new Book();
+      </label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-radio-input" type="radio" name="submissions[6][answer]" value="wrong" id="submission_6_answer3">
+      <label class="form-radio-label" for="submission_6_answer3">
+        D. Book m = new Book("A Tale of Two Cities", "Charles Dickens", 4.7);
+      </label>
+    </div>
+  </li>
+
+  <li class=" quiz-question">
+    <p>7. Consider the following class definition. Assume that a BookRental object called rental has been properly declared and initialized. Which of the following statements are valid? Check all the applies.</p>
+    <pre><code>public class BookRental
+{
+    private long userId;
+    private boolean checkedOut;
+
+    public void returnBook()
+    {
+        userId = 0;
+        checkedOut = false;
+    }
+
+    public void checkOutBook(long userId)
+    {
+		    this.userId = userId;
+        checkedOut = true;
+    }
+}</code></pre>
+    <div class="form-check form-check-inline">
+      <input class="form-radio-input" type="checkbox" name="submissions[7][answer][]" value="rental.returnBook();" id="submission_7_answer1">
+      <label class="form-radio-label" for="submission_7_answer1">
+        rental.returnBook();
+      </label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-radio-input" type="checkbox" name="submissions[7][answer][]" value="rental.returnBook(2);" id="submission_7_answer4">
+      <label class="form-radio-label" for="submission_7_answer4">
+        rental.returnBook(2);
+      </label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-radio-input" type="checkbox" name="submissions[7][answer][]" value="rental.checkOutBook(true);" id="submission_7_answer2">
+      <label class="form-radio-label" for="submission_7_answer2">
+        rental.checkOutBook(true);
+      </label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-radio-input" type="checkbox" name="submissions[7][answer][]" value="rental.checkOutBook(2);" id="submission_7_answer3">
+      <label class="form-radio-label" for="submission_7_answer3">
+        rental.checkOutBook(2);
+      </label>
+    </div>
+  </li>
+
+</ol>
+  <button class="rounded-lg hover:bg-zinc-700 active:text-white/80 primary-btn lesson-next">Submit</button>
+</.simple_form>
