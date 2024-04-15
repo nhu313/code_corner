@@ -100,5 +100,7 @@ defmodule CodeCornerWeb.Router do
     get "/quizzes/pre_quiz", QuizController, :pre_quiz
     get "/quizzes/post_quiz", QuizController, :post_quiz
     resources "/quizzes", QuizController
+    resources "/quiz_questions", QuizQuestionController
+    resources "/quiz_submissions", QuizSubmissionController
   end
 end

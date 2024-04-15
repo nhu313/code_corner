@@ -293,4 +293,196 @@ defmodule CodeCorner.Class do
   def change_quiz_result(%QuizResult{} = quiz_result, attrs \\ %{}) do
     QuizResult.changeset(quiz_result, attrs)
   end
+
+  alias CodeCorner.Class.QuizQuestion
+
+  @doc """
+  Returns the list of quiz_questions.
+
+  ## Examples
+
+      iex> list_quiz_questions()
+      [%QuizQuestion{}, ...]
+
+  """
+  def list_quiz_questions do
+    Repo.all(QuizQuestion)
+  end
+
+  @doc """
+  Gets a single quiz_question.
+
+  Raises `Ecto.NoResultsError` if the Quiz question does not exist.
+
+  ## Examples
+
+      iex> get_quiz_question!(123)
+      %QuizQuestion{}
+
+      iex> get_quiz_question!(456)
+      ** (Ecto.NoResultsError)
+
+  """
+  def get_quiz_question!(id), do: Repo.get!(QuizQuestion, id)
+
+  @doc """
+  Creates a quiz_question.
+
+  ## Examples
+
+      iex> create_quiz_question(%{field: value})
+      {:ok, %QuizQuestion{}}
+
+      iex> create_quiz_question(%{field: bad_value})
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def create_quiz_question(attrs \\ %{}) do
+    %QuizQuestion{}
+    |> QuizQuestion.changeset(attrs)
+    |> Repo.insert()
+  end
+
+  @doc """
+  Updates a quiz_question.
+
+  ## Examples
+
+      iex> update_quiz_question(quiz_question, %{field: new_value})
+      {:ok, %QuizQuestion{}}
+
+      iex> update_quiz_question(quiz_question, %{field: bad_value})
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def update_quiz_question(%QuizQuestion{} = quiz_question, attrs) do
+    quiz_question
+    |> QuizQuestion.changeset(attrs)
+    |> Repo.update()
+  end
+
+  @doc """
+  Deletes a quiz_question.
+
+  ## Examples
+
+      iex> delete_quiz_question(quiz_question)
+      {:ok, %QuizQuestion{}}
+
+      iex> delete_quiz_question(quiz_question)
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def delete_quiz_question(%QuizQuestion{} = quiz_question) do
+    Repo.delete(quiz_question)
+  end
+
+  @doc """
+  Returns an `%Ecto.Changeset{}` for tracking quiz_question changes.
+
+  ## Examples
+
+      iex> change_quiz_question(quiz_question)
+      %Ecto.Changeset{data: %QuizQuestion{}}
+
+  """
+  def change_quiz_question(%QuizQuestion{} = quiz_question, attrs \\ %{}) do
+    QuizQuestion.changeset(quiz_question, attrs)
+  end
+
+  alias CodeCorner.Class.QuizSubmission
+
+  @doc """
+  Returns the list of quiz_submissions.
+
+  ## Examples
+
+      iex> list_quiz_submissions()
+      [%QuizSubmission{}, ...]
+
+  """
+  def list_quiz_submissions do
+    Repo.all(QuizSubmission)
+  end
+
+  @doc """
+  Gets a single quiz_submission.
+
+  Raises `Ecto.NoResultsError` if the Quiz submission does not exist.
+
+  ## Examples
+
+      iex> get_quiz_submission!(123)
+      %QuizSubmission{}
+
+      iex> get_quiz_submission!(456)
+      ** (Ecto.NoResultsError)
+
+  """
+  def get_quiz_submission!(id), do: Repo.get!(QuizSubmission, id)
+
+  @doc """
+  Creates a quiz_submission.
+
+  ## Examples
+
+      iex> create_quiz_submission(%{field: value})
+      {:ok, %QuizSubmission{}}
+
+      iex> create_quiz_submission(%{field: bad_value})
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def create_quiz_submission(attrs \\ %{}) do
+    %QuizSubmission{}
+    |> QuizSubmission.changeset(attrs)
+    |> Repo.insert()
+  end
+
+  @doc """
+  Updates a quiz_submission.
+
+  ## Examples
+
+      iex> update_quiz_submission(quiz_submission, %{field: new_value})
+      {:ok, %QuizSubmission{}}
+
+      iex> update_quiz_submission(quiz_submission, %{field: bad_value})
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def update_quiz_submission(%QuizSubmission{} = quiz_submission, attrs) do
+    quiz_submission
+    |> QuizSubmission.changeset(attrs)
+    |> Repo.update()
+  end
+
+  @doc """
+  Deletes a quiz_submission.
+
+  ## Examples
+
+      iex> delete_quiz_submission(quiz_submission)
+      {:ok, %QuizSubmission{}}
+
+      iex> delete_quiz_submission(quiz_submission)
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def delete_quiz_submission(%QuizSubmission{} = quiz_submission) do
+    Repo.delete(quiz_submission)
+  end
+
+  @doc """
+  Returns an `%Ecto.Changeset{}` for tracking quiz_submission changes.
+
+  ## Examples
+
+      iex> change_quiz_submission(quiz_submission)
+      %Ecto.Changeset{data: %QuizSubmission{}}
+
+  """
+  def change_quiz_submission(%QuizSubmission{} = quiz_submission, attrs \\ %{}) do
+    QuizSubmission.changeset(quiz_submission, attrs)
+  end
 end

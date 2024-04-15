@@ -54,4 +54,38 @@ defmodule CodeCorner.ClassFixtures do
 
     quiz_result
   end
+
+  @doc """
+  Generate a quiz_question.
+  """
+  def quiz_question_fixture(attrs \\ %{}) do
+    {:ok, quiz_question} =
+      attrs
+      |> Enum.into(%{
+        answer: "some answer",
+        description: "some description",
+        quiz_id: 42
+      })
+      |> CodeCorner.Class.create_quiz_question()
+
+    quiz_question
+  end
+
+  @doc """
+  Generate a quiz_submission.
+  """
+  def quiz_submission_fixture(attrs \\ %{}) do
+    {:ok, quiz_submission} =
+      attrs
+      |> Enum.into(%{
+        answer: "some answer",
+        correct: true,
+        question_id: 42,
+        quiz_id: 42,
+        student_id: 42
+      })
+      |> CodeCorner.Class.create_quiz_submission()
+
+    quiz_submission
+  end
 end

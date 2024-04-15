@@ -1,0 +1,19 @@
+<.header>
+  Quiz submission <%= @quiz_submission.id %>
+  <:subtitle>This is a quiz_submission record from your database.</:subtitle>
+  <:actions>
+    <.link href={~p"/quiz_submissions/#{@quiz_submission}/edit"}>
+      <.button>Edit quiz_submission</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.list>
+  <:item title="Quiz"><%= @quiz_submission.quiz_id %></:item>
+  <:item title="Question"><%= @quiz_submission.question_id %></:item>
+  <:item title="Student"><%= @quiz_submission.student_id %></:item>
+  <:item title="Answer"><%= @quiz_submission.answer %></:item>
+  <:item title="Correct"><%= @quiz_submission.correct %></:item>
+</.list>
+
+<.back navigate={~p"/quiz_submissions"}>Back to quiz_submissions</.back>

@@ -22,3 +22,8 @@ mix phx.gen.live Practices Problem problems lesson_id:integer description:string
 <i class="fa fa-circle-check checkmark checked"></i>
       <i class="fa fa-circle-check checkmark checked answer-check"></i>
       <i class="fa fa-circle-xmark checkmark answer-check xmark"></i>
+
+```
+mix phx.gen.html Class QuizQuestion quiz_questions quiz_id:integer answer:string description:string
+mix phx.gen.html Class QuizSubmission quiz_submissions quiz_id:integer question_id:integer student_id:integer answer:string correct:boolean
+```

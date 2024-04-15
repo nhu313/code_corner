@@ -1,0 +1,13 @@
+<.simple_form :let={f} for={@changeset} action={@action}>
+  <.error :if={@changeset.action}>
+    Oops, something went wrong! Please check the errors below.
+  </.error>
+  <.input field={f[:quiz_id]} type="number" label="Quiz" />
+  <.input field={f[:question_id]} type="number" label="Question" />
+  <.input field={f[:student_id]} type="number" label="Student" />
+  <.input field={f[:answer]} type="text" label="Answer" />
+  <.input field={f[:correct]} type="checkbox" label="Correct" />
+  <:actions>
+    <.button>Save Quiz submission</.button>
+  </:actions>
+</.simple_form>

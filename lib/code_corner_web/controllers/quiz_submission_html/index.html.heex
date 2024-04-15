@@ -1,0 +1,27 @@
+<.header>
+  Listing Quiz submissions
+  <:actions>
+    <.link href={~p"/quiz_submissions/new"}>
+      <.button>New Quiz submission</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.table id="quiz_submissions" rows={@quiz_submissions} row_click={&JS.navigate(~p"/quiz_submissions/#{&1}")}>
+  <:col :let={quiz_submission} label="Quiz"><%= quiz_submission.quiz_id %></:col>
+  <:col :let={quiz_submission} label="Question"><%= quiz_submission.question_id %></:col>
+  <:col :let={quiz_submission} label="Student"><%= quiz_submission.student_id %></:col>
+  <:col :let={quiz_submission} label="Answer"><%= quiz_submission.answer %></:col>
+  <:col :let={quiz_submission} label="Correct"><%= quiz_submission.correct %></:col>
+  <:action :let={quiz_submission}>
+    <div class="sr-only">
+      <.link navigate={~p"/quiz_submissions/#{quiz_submission}"}>Show</.link>
+    </div>
+    <.link navigate={~p"/quiz_submissions/#{quiz_submission}/edit"}>Edit</.link>
+  </:action>
+  <:action :let={quiz_submission}>
+    <.link href={~p"/quiz_submissions/#{quiz_submission}"} method="delete" data-confirm="Are you sure?">
+      Delete
+    </.link>
+  </:action>
+</.table>

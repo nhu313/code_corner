@@ -182,4 +182,124 @@ defmodule CodeCorner.ClassTest do
       assert %Ecto.Changeset{} = Class.change_quiz_result(quiz_result)
     end
   end
+
+  describe "quiz_questions" do
+    alias CodeCorner.Class.QuizQuestion
+
+    import CodeCorner.ClassFixtures
+
+    @invalid_attrs %{description: nil, quiz_id: nil, answer: nil}
+
+    test "list_quiz_questions/0 returns all quiz_questions" do
+      quiz_question = quiz_question_fixture()
+      assert Class.list_quiz_questions() == [quiz_question]
+    end
+
+    test "get_quiz_question!/1 returns the quiz_question with given id" do
+      quiz_question = quiz_question_fixture()
+      assert Class.get_quiz_question!(quiz_question.id) == quiz_question
+    end
+
+    test "create_quiz_question/1 with valid data creates a quiz_question" do
+      valid_attrs = %{description: "some description", quiz_id: 42, answer: "some answer"}
+
+      assert {:ok, %QuizQuestion{} = quiz_question} = Class.create_quiz_question(valid_attrs)
+      assert quiz_question.description == "some description"
+      assert quiz_question.quiz_id == 42
+      assert quiz_question.answer == "some answer"
+    end
+
+    test "create_quiz_question/1 with invalid data returns error changeset" do
+      assert {:error, %Ecto.Changeset{}} = Class.create_quiz_question(@invalid_attrs)
+    end
+
+    test "update_quiz_question/2 with valid data updates the quiz_question" do
+      quiz_question = quiz_question_fixture()
+      update_attrs = %{description: "some updated description", quiz_id: 43, answer: "some updated answer"}
+
+      assert {:ok, %QuizQuestion{} = quiz_question} = Class.update_quiz_question(quiz_question, update_attrs)
+      assert quiz_question.description == "some updated description"
+      assert quiz_question.quiz_id == 43
+      assert quiz_question.answer == "some updated answer"
+    end
+
+    test "update_quiz_question/2 with invalid data returns error changeset" do
+      quiz_question = quiz_question_fixture()
+      assert {:error, %Ecto.Changeset{}} = Class.update_quiz_question(quiz_question, @invalid_attrs)
+      assert quiz_question == Class.get_quiz_question!(quiz_question.id)
+    end
+
+    test "delete_quiz_question/1 deletes the quiz_question" do
+      quiz_question = quiz_question_fixture()
+      assert {:ok, %QuizQuestion{}} = Class.delete_quiz_question(quiz_question)
+      assert_raise Ecto.NoResultsError, fn -> Class.get_quiz_question!(quiz_question.id) end
+    end
+
+    test "change_quiz_question/1 returns a quiz_question changeset" do
+      quiz_question = quiz_question_fixture()
+      assert %Ecto.Changeset{} = Class.change_quiz_question(quiz_question)
+    end
+  end
+
+  describe "quiz_submissions" do
+    alias CodeCorner.Class.QuizSubmission
+
+    import CodeCorner.ClassFixtures
+
+    @invalid_attrs %{quiz_id: nil, question_id: nil, student_id: nil, answer: nil, correct: nil}
+
+    test "list_quiz_submissions/0 returns all quiz_submissions" do
+      quiz_submission = quiz_submission_fixture()
+      assert Class.list_quiz_submissions() == [quiz_submission]
+    end
+
+    test "get_quiz_submission!/1 returns the quiz_submission with given id" do
+      quiz_submission = quiz_submission_fixture()
+      assert Class.get_quiz_submission!(quiz_submission.id) == quiz_submission
+    end
+
+    test "create_quiz_submission/1 with valid data creates a quiz_submission" do
+      valid_attrs = %{quiz_id: 42, question_id: 42, student_id: 42, answer: "some answer", correct: true}
+
+      assert {:ok, %QuizSubmission{} = quiz_submission} = Class.create_quiz_submission(valid_attrs)
+      assert quiz_submission.quiz_id == 42
+      assert quiz_submission.question_id == 42
+      assert quiz_submission.student_id == 42
+      assert quiz_submission.answer == "some answer"
+      assert quiz_submission.correct == true
+    end
+
+    test "create_quiz_submission/1 with invalid data returns error changeset" do
+      assert {:error, %Ecto.Changeset{}} = Class.create_quiz_submission(@invalid_attrs)
+    end
+
+    test "update_quiz_submission/2 with valid data updates the quiz_submission" do
+      quiz_submission = quiz_submission_fixture()
+      update_attrs = %{quiz_id: 43, question_id: 43, student_id: 43, answer: "some updated answer", correct: false}
+
+      assert {:ok, %QuizSubmission{} = quiz_submission} = Class.update_quiz_submission(quiz_submission, update_attrs)
+      assert quiz_submission.quiz_id == 43
+      assert quiz_submission.question_id == 43
+      assert quiz_submission.student_id == 43
+      assert quiz_submission.answer == "some updated answer"
+      assert quiz_submission.correct == false
+    end
+
+    test "update_quiz_submission/2 with invalid data returns error changeset" do
+      quiz_submission = quiz_submission_fixture()
+      assert {:error, %Ecto.Changeset{}} = Class.update_quiz_submission(quiz_submission, @invalid_attrs)
+      assert quiz_submission == Class.get_quiz_submission!(quiz_submission.id)
+    end
+
+    test "delete_quiz_submission/1 deletes the quiz_submission" do
+      quiz_submission = quiz_submission_fixture()
+      assert {:ok, %QuizSubmission{}} = Class.delete_quiz_submission(quiz_submission)
+      assert_raise Ecto.NoResultsError, fn -> Class.get_quiz_submission!(quiz_submission.id) end
+    end
+
+    test "change_quiz_submission/1 returns a quiz_submission changeset" do
+      quiz_submission = quiz_submission_fixture()
+      assert %Ecto.Changeset{} = Class.change_quiz_submission(quiz_submission)
+    end
+  end
 end
