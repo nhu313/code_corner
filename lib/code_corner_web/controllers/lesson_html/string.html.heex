@@ -7,39 +7,55 @@
 </p>
 <pre><code class="jsx">String cafeName = &quot;Java Café&quot;;</code></pre>
 <p>
-  Similar to primitive data type, you can declare a String variable with the type, variable name, and the value. In the real world, text are rarely one char long, therefore, String is more often used when dealing with text. For example, for the cafe, a String can be the cafe name or the menu item. Here are a few ways to create a new String:
-</p>
+  Similar to primitive data type, you can declare a String variable with the type (String), variable name, and the value:</p>
+  <ol class="ordered-list">
+    <li>type (String)</li>
+    <li>lower case variable name (cafeName)</li>
+    <li>value in double quote(&quot;Java Café&quot;)</li>
+  </ol>
+
+  <p>In the real world, text are rarely one char long, therefore, String is most often used when dealing with text. Anywhere more than one character is used, then a String is needed. Here are a few more examples:</p>
 <pre><code class="java">String word = &quot;coffee&quot;;
-
 String phrase = &quot;Welcome to Java Café&quot;;
+</code></pre>
 
-String oneCharacter = &quot;a&quot;;
+<h3>
+  Let’s practice!
+</h3>
+<ol class="ordered-list">
+  <li>
+    <p>
+      Declare a String variable named <code class="inline">drink</code> with the value <code class="inline">mocha</code>.
+    </p>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 201, "user_id" => @current_user.id}) %>
+  </li>
+  <li>
+    <p>
+      Create a String variable named <code class="inline">food</code> with the value <code class="inline">Strawberry oats</code>.
+    </p>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 202, "user_id" => @current_user.id}) %>
+  </li>
+  <li>
+    <p>
+      Create a String variable named <code class="inline">barista</code> with the value <code class="inline">Carol</code>
+    </p>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 203, "user_id" => @current_user.id}) %>
+  </li>
+  <li>
+    <p>
+      Create a String variable named <code class="inline">dessert</code> with the value <code class="inline">brownie</code>
+    </p>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 204, "user_id" => @current_user.id}) %>
+  </li>
+  <li>
+    <p>
+      Create a String variable named <code class="inline">smoothie</code> with the value <code class="inline">Sweet Green</code>
+    </p>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 205, "user_id" => @current_user.id}) %>
+  </li>
+</ol>
 
-String empty = new String();
-String empty = &quot;&quot;;</code></pre>
-<h2>
-  Converting other data type to String
-</h2>
-<p>
-  There are usually two ways to convert a primitive data type to a String. One way is to use the primitive wrapper class to convert it. Another way is to use
-  <code class="inline">String.valueOf()</code>
-  Both are equally valid.
-</p>
-<pre><code class="java">//using Integer which is the wrapper class for int
-String quantity1 = Integer.toString(5); // &quot;5&quot;
 
-//using String.valueOf
-String quantity2 = String.valueOf(5); // &quot;5&quot;</code></pre>
-<p>
-  Similarly with double:
-</p>
-<pre><code class="java">String tax1 = Double.toString(0.06); // &quot;0.06&quot;
-String tax2 = String.valueOf(0.06); // &quot;0.06&quot;</code></pre>
-<p>
-  Character:
-</p>
-<pre><code class="java">String character = Character.toString(&#39;c&#39;); // &quot;c&quot;
-String character2 = String.valueOf(&#39;c&#39;); // &quot;c&quot;</code></pre>
 <h2>
   String concatenation
 </h2>
@@ -57,12 +73,6 @@ String message = greeting + customerName;</code></pre>
 </p>
 <pre><code class="java">int quantity = 2;
 String order = &quot;I would like &quot; + quantity + &quot; black coffee&quot;;</code></pre>
-<p>
-  If an integer comes before the string, Java cannot combine an integer with a String. First, convert the integer into a String, then combine it with the other string.
-</p>
-<pre><code class="java">int quantity = 2;
-// 1 black coffee
-String order = String.valueOf(quantity) + &quot; black coffee&quot;;</code></pre>
 <p>
   Note this is a shortened version to learn the essential for the research project.
 </p>

@@ -37,6 +37,18 @@
 
 # CodeCorner.Repo.insert!(%CodeCorner.Class.Lesson{id: 3, name: "String", order: 10, slug: "string"})
 
+import Ecto.Query, warn: false
+from(p in CodeCorner.Practices.Problem, where: p.id > 200) |> CodeCorner.Repo.delete_all()
+
+CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 201, description: "Declare a String variable named drink with the value mocha", lesson_id: 3, group: "new_string", answer: "stringdrink=\"mocha\";"})
+CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 202, description: "Create a String variable named food with the value Strawberry oats", lesson_id: 3, group: "new_string", answer: "stringfood=\"strawberryoats\";"})
+CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 203, description: "Create a String variable barista named with the value Carol", lesson_id: 3, group: "new_string", answer: "stringbarista=\"carol\";"})
+CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 204, description: "Create a String variable named dessert with the value brownie", lesson_id: 3, group: "new_string", answer: "stringdessert=\"brownie\";"})
+CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 205, description: "Create a String variable named smoothie with the value sweet green", lesson_id: 3, group: "new_string", answer: "stringsmoothie=\"sweetgreen\";"})
+
+
+
+
 
 # CodeCorner.Repo.insert!(%CodeCorner.Class.Lesson{id: 4, name: "Class", order: 15, slug: "class"})
 # CodeCorner.Repo.insert!(%CodeCorner.Class.Lesson{id: 5, name: "Method", order: 20, slug: "method"})
