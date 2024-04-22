@@ -16,17 +16,35 @@ defmodule CodeCornerWeb.QuizController do
 
   @spec submit_pre_quiz(Plug.Conn.t(), any()) :: Plug.Conn.t()
   def submit_pre_quiz(conn, params) do
-    IO.inspect params
-    render(conn, :submit_pre_quiz)
+    submissions = params["submissions"] || {}
+    attrs = %{
+      quiz_id: params["quiz_id"],
+      student: conn.assigns[:current_user],
+      submissions: submissions
+    }
+
+    CodeCorner.Class.submit_quiz(attrs)
+    # render(conn, :submit_pre_quiz)
+    conn
+    |> put_flash(:info, "Pre Quiz submitted! Let's start our lesson!")
+    |> redirect(to: ~p"/lessons/data_types")
   end
 
   def submit_post_quiz(conn, params) do
-    # TODO
+    submissions = params["submissions"] || {}
+    attrs = %{
+      quiz_id: params["quiz_id"],
+      student: conn.assigns[:current_user],
+      submissions: submissions
+    }
+
+    CodeCorner.Class.submit_quiz(attrs)
     render(conn, :submit_post_quiz)
   end
 
   def post_quiz(conn, _params) do
-    render(conn, :post_quiz)
+    changeset = Class.change_quiz(%Quiz{})
+    render(conn, :post_quiz, changeset: changeset)
   end
 
   def new(conn, _params) do

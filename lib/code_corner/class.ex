@@ -325,6 +325,14 @@ defmodule CodeCorner.Class do
   """
   def get_quiz_question!(id), do: Repo.get!(QuizQuestion, id)
 
+  def get_all_quiz_questions(quiz_id) do
+    query = from q in QuizQuestion,
+            where: q.quiz_id == ^quiz_id
+
+    Repo.all(query)
+  end
+
+
   @doc """
   Creates a quiz_question.
 
@@ -485,4 +493,35 @@ defmodule CodeCorner.Class do
   def change_quiz_submission(%QuizSubmission{} = quiz_submission, attrs \\ %{}) do
     QuizSubmission.changeset(quiz_submission, attrs)
   end
+
+  def submit_quiz(%{quiz_id: quiz_id, submissions: submissions} = attrs) do
+    questions = quiz_id
+                |> get_all_quiz_questions()
+                |> Map.new(fn x -> {Integer.to_string(x.id), x} end)
+
+    submissions
+    |> Enum.map(fn x -> map_answers(x, questions, attrs) end)
+    |> Enum.map(&create_quiz_submission/1)
+  end
+
+  defp map_answers({question_id, %{"answer" => answers}}, questions, attrs) do
+    correct_answers = questions[question_id].answer
+    answers = remove_noanswer(answers)
+    correct = Enum.all?(answers, fn x -> String.contains?(correct_answers, x) end)
+
+    %{
+      question_id: question_id,
+      answer: answers,
+      correct: correct,
+      student_id: attrs.student.id,
+      quiz_id: attrs.quiz_id
+    }
+  end
+
+  defp remove_noanswer(answers) when length(answers) > 1 do
+    List.delete(answers, "noanswer")
+  end
+
+  defp remove_noanswer(answers), do: answers
+
 end

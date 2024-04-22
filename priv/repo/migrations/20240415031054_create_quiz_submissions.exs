@@ -6,7 +6,7 @@ defmodule CodeCorner.Repo.Migrations.CreateQuizSubmissions do
       add :quiz_id, :integer
       add :question_id, :integer
       add :student_id, :integer
-      add :answer, :string
+      add :answer, {:array, :string}
       add :correct, :boolean, default: false, null: false
 
       timestamps(type: :utc_datetime)
