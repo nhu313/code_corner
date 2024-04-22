@@ -11,6 +11,12 @@
 # and so on) as they will fail if something goes wrong.
 
 # CodeCorner.Repo.insert!(%CodeCorner.Class.Lesson{id: 1, name: "Data Types", order: 1, slug: "data_types"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 101, description: "What data type can be used for quantity (ex: 1, 5, 10)?", lesson_id: 1, group: "data_type", answer: "int;short;byte;long;"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 102, description: "What data type can be used to store tax number (ex: 0.06)?", lesson_id: 1, group: "data_type", answer: "decimal;float"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 103, description: "What data type can be used to store server name?", lesson_id: 1, group: "data_type", answer: "char;string"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 104, description: "What data type can be used to capture if a table is available or not (ex: true, false)?", lesson_id: 1, group: "data_type", answer: "boolean"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 105, description: "What data type can be used to store table number (ex: 1, 2, 3)?", lesson_id: 1, group: "data_type", answer: "int;short;byte;long;"})
+
 
 # CodeCorner.Repo.insert!(%CodeCorner.Class.Lesson{id: 2, name: "Variables", order: 5, slug: "variables"})
 # # simple variable
@@ -42,7 +48,6 @@
 
 
 
-# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 3, description: "", lesson_id: , group: "", answer: ""})
 # CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 4, description: "", lesson_id: , group: "", answer: ""})
 # CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 5, description: "", lesson_id: , group: "", answer: ""})
 # CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 6, description: "", lesson_id: , group: "", answer: ""})
@@ -62,21 +67,21 @@
 # CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 0, description: "", lesson_id: , group: "", answer: ""})
 # CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 1, description: "", lesson_id: , group: "", answer: ""})
 
-# CodeCorner.Repo.insert!(%CodeCorner.Class.Quiz{id: 1, name: "Pre Quiz"})
-CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 1, quiz_id: 1, answer: "int", description: "What data type is the most appropriate to store the number of students in a class?"})
-CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 2, quiz_id: 1, answer: "double", description: "What data type is the most appropriate to store the student's grade point average (GPA) (e.g. 3.4, 4.0)?"})
-CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 3, quiz_id: 1, answer: "4.0", description: "What is the value of a?"})
-CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 4, quiz_id: 1, answer: "x = 3, y = 6", description: "What are the values of x and y after the following code executes?"})
-CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 5, quiz_id: 1, answer: "printSlices(slicesPerPerson);", description: "Consider the following methods, which appear in the same class. Which of the following lines would go into /* INSERT CODE HERE */ in order to call the printSlices method?"})
-CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 6, quiz_id: 1, answer: "correct", description: "Consider the following class. Which of the following code segments will construct a Movie object m with a title of “Lion King” and rating of 8.0?"})
-CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 7, quiz_id: 1, answer: "myParty.cancelParty();", description: "Consider the following class definition. Assume that a Party object called myParty has been properly declared and initialized. Which of the following statements are valid?"})
+# # CodeCorner.Repo.insert!(%CodeCorner.Class.Quiz{id: 1, name: "Pre Quiz"})
+# CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 1, quiz_id: 1, answer: "int", description: "What data type is the most appropriate to store the number of students in a class?"})
+# CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 2, quiz_id: 1, answer: "double", description: "What data type is the most appropriate to store the student's grade point average (GPA) (e.g. 3.4, 4.0)?"})
+# CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 3, quiz_id: 1, answer: "4.0", description: "What is the value of a?"})
+# CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 4, quiz_id: 1, answer: "x = 3, y = 6", description: "What are the values of x and y after the following code executes?"})
+# CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 5, quiz_id: 1, answer: "printSlices(slicesPerPerson);", description: "Consider the following methods, which appear in the same class. Which of the following lines would go into /* INSERT CODE HERE */ in order to call the printSlices method?"})
+# CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 6, quiz_id: 1, answer: "correct", description: "Consider the following class. Which of the following code segments will construct a Movie object m with a title of “Lion King” and rating of 8.0?"})
+# CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 7, quiz_id: 1, answer: "myParty.cancelParty();", description: "Consider the following class definition. Assume that a Party object called myParty has been properly declared and initialized. Which of the following statements are valid?"})
 
 
-# CodeCorner.Repo.insert!(%CodeCorner.Class.Quiz{id: 2, name: "Post Quiz"})
-CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 8, quiz_id: 2, answer: "double", description: "What data type is the most appropriate to store the price of an item?"})
-CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 9, quiz_id: 2, answer: "int", description: "What data type is the most appropriate to store the number of employees at a store?"})
-CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 10, quiz_id: 2, answer: "2.0", description: "What is the value of a?"})
-CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 11, quiz_id: 2, answer: "x = 2, y = 4", description: "What are the values of x and y after the following code executes?"})
-CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 12, quiz_id: 2, answer: "printPayment(paymentPerPerson);", description: "Consider the following methods, which appear in the same class. Which of the following lines would go into /* INSERT CODE HERE */ in order to call the paymentPerPerson method?"})
-CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 13, quiz_id: 2, answer: "correct", description: "Consider the following class. Which of the following code segments will construct a Book object m with a title of \"A Tale of Two Cities\" and rating of 4.7?"})
-CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 14, quiz_id: 2, answer: "rental.returnBook();rental.checkOutBook(2);", description: "Consider the following class definition. Assume that a BookRental object called rental has been properly declared and initialized. Which of the following statements are valid?"})
+# # CodeCorner.Repo.insert!(%CodeCorner.Class.Quiz{id: 2, name: "Post Quiz"})
+# CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 8, quiz_id: 2, answer: "double", description: "What data type is the most appropriate to store the price of an item?"})
+# CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 9, quiz_id: 2, answer: "int", description: "What data type is the most appropriate to store the number of employees at a store?"})
+# CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 10, quiz_id: 2, answer: "2.0", description: "What is the value of a?"})
+# CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 11, quiz_id: 2, answer: "x = 2, y = 4", description: "What are the values of x and y after the following code executes?"})
+# CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 12, quiz_id: 2, answer: "printPayment(paymentPerPerson);", description: "Consider the following methods, which appear in the same class. Which of the following lines would go into /* INSERT CODE HERE */ in order to call the paymentPerPerson method?"})
+# CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 13, quiz_id: 2, answer: "correct", description: "Consider the following class. Which of the following code segments will construct a Book object m with a title of \"A Tale of Two Cities\" and rating of 4.7?"})
+# CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 14, quiz_id: 2, answer: "rental.returnBook();rental.checkOutBook(2);", description: "Consider the following class definition. Assume that a BookRental object called rental has been properly declared and initialized. Which of the following statements are valid?"})

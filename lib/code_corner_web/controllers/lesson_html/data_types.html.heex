@@ -143,10 +143,58 @@ For example, in the cafe system, a boolean can be used to indicate if a table pa
 <h2>
 Summary</h2>
 <p>
-Data type is a way for the computer to understand what the data represent (e.g. number, character). It also lets the computer knows how much storage to allocate for the data. For whole number, int and long is used most often. For decimal, double is used for better precision. Char is used for text. Boolean is used for logical values (true/false). Figure 2 marked a few data types that can be used to represent the information needed for a receipt.</p>
+Data type is a way for the computer to understand what the data represent (e.g. number, character). It also lets the computer knows how much storage to allocate for the data. For whole number, int and long is used most often. For decimal, double is used for better precision. Char is used for text. Boolean is used for logical values (true/false). Figure 2 marked a few data types that can be used to represent the information needed for a receipt. Here are the primitive(/base) data types again:</p>
+  <ol class="ordered-list">
+  <li>byte</li>
+  <li>short</li>
+  <li>int</li>
+  <li>long</li>
+  <li>float</li>
+  <li>double</li>
+  <li>char</li>
+  <li>boolean</li>
+</ol>
+
 <div class="lesson-image">
     <img src="/images/receipt_data.png" width="300px">
   <p>Figure 2: Sample receipt with some data mark</p></div>
+
+<h3>
+  Let’s practice!
+</h3>
+<ol class="ordered-list">
+  <li>
+    <p>
+      What data type can be used for quantity (ex: 1, 5, 10)?
+    </p>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 101, "user_id" => @current_user.id}) %>
+  </li>
+  <li>
+    <p>
+      What data type can be used to store tax number (ex: 0.06)?
+    </p>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 102, "user_id" => @current_user.id}) %>
+  </li>
+  <li>
+    <p>
+      What data type can be used to store server name (ex: "Carol")?
+    </p>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 103, "user_id" => @current_user.id}) %>
+  </li>
+  <li>
+    <p>
+      What data type can be used to capture if a table is available or not (ex: true, false)?
+    </p>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 104, "user_id" => @current_user.id}) %>
+  </li>
+  <li>
+    <p>
+      What data type can be used to store table number (ex: 1, 2, 3)?
+    </p>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 104, "user_id" => @current_user.id}) %>
+  </li>
+</ol>
+
 <div class="lesson-actions">
 
   <a href="/lessons/variables">
