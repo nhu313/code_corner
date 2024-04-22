@@ -2,6 +2,7 @@ defmodule CodeCornerWeb.Router do
   use CodeCornerWeb, :router
 
   import CodeCornerWeb.UserAuth
+  import CodeCornerWeb.LessonStatus
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -11,6 +12,7 @@ defmodule CodeCornerWeb.Router do
     plug :protect_from_forgery
     plug :put_secure_browser_headers
     plug :fetch_current_user
+    plug :fetch_lesson_status
     plug CodeCornerWeb.Plugs.RequestLog
   end
 
