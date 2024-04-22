@@ -180,7 +180,8 @@ strong {
 input.practice-input[type="text"], textarea.practice-input  {
   height: auto;
   font-size: 12px;
-  min-width: 350px;
+  min-width: 400px;
+  line-height: 1rem;
 }
 
 code.inline {

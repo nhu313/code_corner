@@ -27,8 +27,6 @@ In Java, code must be written inside a class. Think of a class as a container fo
 <li><b>class name</b> `JavaCafeSystem` - this is the name of the class. It can be named anything that is not a Java keyword (e.g. class, int). By convention, each word in the name is capitalized. This naming convention is called camel case.</li>
 <li><b>{}</b> - open and close curly braces. Place the actual code inside these curly braces.</li></ol>
 <br>
-<p>
-Again, a class signature looks like this:</p>
 <img src="/images/class.png" width="400px">
 <p>
 Let’s practice:</p>
@@ -43,6 +41,43 @@ Create a class called Order.  </li>
 Create a class called Drink.  </li>
   <li>
 Create a class called Food.  </li>
+</ol>
+
+
+<h3>
+  Let’s practice!
+</h3>
+<ol class="ordered-list">
+  <li>
+    <p>
+      Create a class called Employee.
+    </p>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 401, "user_id" => @current_user.id, "input_type" => "textarea"}) %>
+  </li>
+  <li>
+    <p>
+      Create a class called Menu.
+    </p>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 402, "user_id" => @current_user.id, "input_type" => "textarea"}) %>
+  </li>
+  <li>
+    <p>
+      Create a class called Order.
+    </p>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 403, "user_id" => @current_user.id, "input_type" => "textarea"}) %>
+  </li>
+  <li>
+    <p>
+      Create a class called Drink.
+    </p>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 404, "user_id" => @current_user.id, "input_type" => "textarea"}) %>
+  </li>
+  <li>
+    <p>
+      Create a class called Food.
+    </p>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 405, "user_id" => @current_user.id, "input_type" => "textarea"}) %>
+  </li>
 </ol>
 
 <a href="/lessons/method">  <button class="rounded-lg hover:bg-zinc-700 active:text-white/80 primary-btn lesson-next">

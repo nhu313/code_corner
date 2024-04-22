@@ -208,6 +208,6 @@ defmodule CodeCorner.Practices do
   end
 
   def clean_answer(answer) do
-    answer |> String.downcase |> String.replace(" ", "")
+    answer |> String.downcase |> String.replace(" ", "") |> String.replace("\n", "")
   end
 end
