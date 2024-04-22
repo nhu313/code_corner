@@ -1,48 +1,52 @@
 <h1>
-Class &amp; Method</h1>
+Class &amp; Object</h1>
 <p>
-Let’s write our first program. Create a new file named <code class="inline">JavaCafeSystem.java</code> and copy this code into the file. Or test it out <a href="https://replit.com/@nhu313/SimpleClass#src/main/java/JavaCafeSystem.java">here</a>.</p>
-<pre><code class="java">
-//JavaCafeSystem.java
-public class JavaCafeSystem {
+When we build a system, there are a lot of pieces. We need a way to group things together to manage the data. Java uses classes and object to do it. A class is a template. An object is an instance of a class. What does that really mean?
+</p>
+<p>Let's take this form below for example. The is a signed up form.</p>
 
-    public static void main(String[] args) {
-        System.out.println(&quot;Welcome to Java Cafe!&quot;);
-    }
+<form width="500px" class="inline-block">
+  <h2>User Sign Up</h2>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="What do we call you?">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+</form>
+
+<p>
+This form is a template (class). Everytime a user submit their information, they create an instance (object) of that class. So a class define what fields and functionality the objects should have.
+</p>
+<p>Here is what the class looks like in Java:</p>
+<pre><code class="java">public class User {
+  private String name;
+  private String email;
+  private String password;
+
 }</code></pre>
+
+<h2>Class</h2>
 <p>
-When the code is run, it will display <code class="inline">Welcome to Java Cafe!</code>. Let’s dissect this code.</p>
-<h2>
-Class</h2>
-<p>
-First, let’s talk about outer layer, the class. Here is a class named <code class="inline">JavaCafeSystem</code> without the method.</p>
-<pre><code class="java">public class JavaCafeSystem {
+First, let’s talk about outer layer, the class. Here is a class named <code class="inline">User</code> without the fields.</p>
+<pre><code class="java">public class User {
 
 }</code></pre>
 <p>
 In Java, code must be written inside a class. Think of a class as a container for code. It it a way to group code that are related together in a file. Classes are usually nouns such as <code class="inline">System</code> or <code class="inline">Map</code> . To create a class, you need the following:</p>
 <ol class="ordered-list">
   <li><b>Access modifier</b> <code class="inline">public</code> - also call accessor. This defines the visibility of the class which means which file can see the code in this class. The options are: public, protected, or default (none). For now, public will be used for all the code created in this class.</li>
-<li><b>class</b> - this is a keyword. It is required to declare a class. In Java, keywords have special meanings. This is required to declare a class. Java keyword cannot be used for variable name.</li>
-<li><b>class name</b> `JavaCafeSystem` - this is the name of the class. It can be named anything that is not a Java keyword (e.g. class, int). By convention, each word in the name is capitalized. This naming convention is called camel case.</li>
+<li><b>class</b> - this is a keyword. It is required to declare a class. In Java, keywords have special meanings. Java keyword cannot be used for variable name.</li>
+<li><b>class name</b> `User` - this is the name of the class. It can be named anything that is not a Java keyword (e.g. class, int). By convention, each word in the name is capitalized. </li>
 <li><b>{}</b> - open and close curly braces. Place the actual code inside these curly braces.</li></ol>
 <br>
-<img src="/images/class.png" width="400px">
-<p>
-Let’s practice:</p>
-<ol class="ordered-list">
-  <li>
-Create a class called Server.  </li>
-  <li>
-Create a class called Menu.  </li>
-  <li>
-Create a class called Order.  </li>
-  <li>
-Create a class called Drink.  </li>
-  <li>
-Create a class called Food.  </li>
-</ol>
-
+<img src="/images/user_class.png" width="400px">
 
 <h3>
   Let’s practice!
@@ -80,6 +84,6 @@ Create a class called Food.  </li>
   </li>
 </ol>
 
-<a href="/lessons/method">  <button class="rounded-lg hover:bg-zinc-700 active:text-white/80 primary-btn lesson-next">
-    Next: Method
+<a href="/lessons/instance_variables">  <button class="rounded-lg hover:bg-zinc-700 active:text-white/80 primary-btn lesson-next">
+    Next: Instance Variables
   </button></a>

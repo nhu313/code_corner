@@ -13,6 +13,10 @@ defmodule CodeCornerWeb.LessonController do
     render(conn, :variables)
   end
 
+  def instance_variables(conn, _params) do
+    render(conn, :instance_variables)
+  end
+
   def data_types(conn, _params) do
     render(conn, :data_types)
   end

@@ -1,0 +1,50 @@
+<h1>Instance Variables</h1>
+<p>Instance variables are often data we want to capture, like fields on the form. It's a "has-a" relationship with the class. In our case, a User has a name, email, and password. There are more information a user has, but for our systems, this is all we need.</p>
+<p>The way is declared is very similar to how a variable is declared without a value. The only difference is that it usually have an accessor, and the accessor is usually private.</p>
+<img src="/images/instance_variables.png" width="400px">
+
+<p>Here are a few more fields that a User has that we may want to capture:</p>
+<pre><code class="java">public class User {
+  private String name;
+  private String email;
+  private String password;
+
+  private int age;
+  private boolean vip = false;
+}</code></pre>
+
+<h3>
+  Let’s practice!
+</h3>
+<ol class="ordered-list">
+  <li>
+    <p>
+      What data type can be used for quantity (ex: 1, 5, 10)?
+    </p>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 101, "user_id" => @current_user.id}) %>
+  </li>
+  <li>
+    <p>
+      What data type can be used to store tax number (ex: 0.06)?
+    </p>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 102, "user_id" => @current_user.id}) %>
+  </li>
+  <li>
+    <p>
+      What data type can be used to store server name (ex: "Carol")?
+    </p>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 103, "user_id" => @current_user.id}) %>
+  </li>
+  <li>
+    <p>
+      What data type can be used to capture if a table is available or not (ex: true, false)?
+    </p>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 104, "user_id" => @current_user.id}) %>
+  </li>
+  <li>
+    <p>
+      What data type can be used to store table number (ex: 1, 2, 3)?
+    </p>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 105, "user_id" => @current_user.id}) %>
+  </li>
+</ol>

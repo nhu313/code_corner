@@ -94,6 +94,7 @@ defmodule CodeCornerWeb.Router do
     get "/lessons/data_types", LessonController, :data_types
     get "/lessons/string", LessonController, :string
     get "/lessons/class", LessonController, :class
+    get "/lessons/instance_variables", LessonController, :instance_variables
     get "/lessons/method", LessonController, :method
     get "/lessons/object", LessonController, :object
 
