@@ -176,6 +176,20 @@ defmodule CodeCornerWeb.CoreComponents do
     """
   end
 
+  attr :checked, :boolean, required: true, doc: "slug for component"
+  def progress_checkmark(assigns) do
+    if (assigns[:checked]) do
+      ~H"""
+      <i class="fa fa-circle-check checkmark checked"></i>
+      """
+    else
+      ~H"""
+      <span class="checkmark empty-circle"></span>
+      """
+    end
+  end
+
+
   @doc """
   Renders a simple form.
 

@@ -210,19 +210,4 @@ defmodule CodeCorner.Practices do
   def clean_answer(answer) do
     answer |> String.downcase |> String.replace(" ", "") |> String.replace("\n", "")
   end
-
-  def fetch_user_lesson_status(user_id) do
-    # practices = from(p in CodeCorner.Practices.Submission, where: p.user_id > 400) |> CodeCorner.Repo.delete_all()
-
-    # schema "submissions" do
-    #   field :answer, :string
-    #   field :user_id, :integer
-    #   field :problem_id, :integer
-
-    #   timestamps(type: :utc_datetime)
-    # end
-
-
-      %{}
-  end
 end

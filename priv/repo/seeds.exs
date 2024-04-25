@@ -58,12 +58,12 @@ import Ecto.Query, warn: false
 # CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 405, description: "Create a class called Food", lesson_id: 4, group: "create_class", answer: "publicclassfood{}"})
 
 
-CodeCorner.Repo.insert!(%CodeCorner.Class.Lesson{id: 7, name: "Instance Variable", order: 17, slug: "instance_variable"})
-CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 701, description: "Create an instance variable of type String named address.", lesson_id: 7, group: "instance_variables", answer: "privatestringaddress;"})
-CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 702, description: "Create an instance variable of type int named numberOfVisit.", lesson_id: 7, group: "instance_variables", answer: "privateintnumberofvisit;"})
-CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 703, description: "Create an instance variable of type String named favoriteDrink.", lesson_id: 7, group: "instance_variables", answer: "privatestringfavoritedrink;"})
-CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 704, description: "Create an instance variable of type int named yearOfBirth.", lesson_id: 7, group: "instance_variables", answer: "privateintyearofbirth;"})
-CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 705, description: "Create an instance variable of type boolean named active.", lesson_id: 7, group: "instance_variables", answer: "privatebooleanactive;"})
+# CodeCorner.Repo.insert!(%CodeCorner.Class.Lesson{id: 7, name: "Instance Variable", order: 17, slug: "instance_variable"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 701, description: "Create an instance variable of type String named address.", lesson_id: 7, group: "instance_variables", answer: "privatestringaddress;"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 702, description: "Create an instance variable of type int named numberOfVisit.", lesson_id: 7, group: "instance_variables", answer: "privateintnumberofvisit;"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 703, description: "Create an instance variable of type String named favoriteDrink.", lesson_id: 7, group: "instance_variables", answer: "privatestringfavoritedrink;"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 704, description: "Create an instance variable of type int named yearOfBirth.", lesson_id: 7, group: "instance_variables", answer: "privateintyearofbirth;"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 705, description: "Create an instance variable of type boolean named active.", lesson_id: 7, group: "instance_variables", answer: "privatebooleanactive;"})
 
 
 
@@ -96,6 +96,23 @@ CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 705, description: "Cre
 # CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 1, description: "", lesson_id: , group: "", answer: ""})
 
 # # CodeCorner.Repo.insert!(%CodeCorner.Class.Quiz{id: 1, name: "Pre Quiz"})
+# post = MyRepo.get!(Post, 42)
+# post =
+#   post
+#   |> Changeset.change(title: “New title”)
+#   |> Changeset.optimistic_lock(:version)
+
+# case MyRepo.update post do
+#   {:ok, struct} -> # Updated with success
+#   {:error, changeset} -> # Something went wrong
+# end
+
+
+quiz = CodeCorner.Repo.get!(CodeCorner.Class.Quiz, 2)
+        |> Ecto.Changeset.change(slug: "post_quiz")
+        |> Ecto.Changeset.optimistic_lock(:version)
+
+CodeCorner.Repo.update!(quiz)
 # CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 1, quiz_id: 1, answer: "int", description: "What data type is the most appropriate to store the number of students in a class?"})
 # CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 2, quiz_id: 1, answer: "double", description: "What data type is the most appropriate to store the student's grade point average (GPA) (e.g. 3.4, 4.0)?"})
 # CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 3, quiz_id: 1, answer: "4.0", description: "What is the value of a?"})

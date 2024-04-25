@@ -89,6 +89,7 @@
 
     <aside id="logo-sidebar" class="h-max fixed w-32 top-0 left-0 z-30 h-screen pt-20 transition-transform -translate-x-full border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
       <div class="h-full pb-4 overflow-y-auto dark:bg-gray-800 sidebar-wrapper">
+
         <ul class="font-medium h-max sidebar">
           <li>
               <a href="/" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
@@ -99,52 +100,54 @@
 
           <li>
               <a href="/quizzes/pre_quiz" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-              <span class="checkmark empty-circle"></span>0. Pre Quiz
+                <.progress_checkmark checked={Enum.member?(@lesson_statuses, "pre_quiz")} />
+                0. Pre Quiz
               </a>
           </li>
           <li>
               <a href="/lessons/data_types" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-              <span class="checkmark empty-circle"></span>1. Data Types
+                <.progress_checkmark checked={Enum.member?(@lesson_statuses, "data_types")} />
+                1. Data Types
               </a>
           </li>
           <li>
               <a href="/lessons/variables" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                <span class="checkmark empty-circle"></span>2. Variables
+                <.progress_checkmark checked={Enum.member?(@lesson_statuses, "variable_simple")} />2. Variables
               </a>
           </li>
           <li>
               <a href="/lessons/string" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                <span class="checkmark empty-circle"></span>3. String
+                <.progress_checkmark checked={Enum.member?(@lesson_statuses, "string")} />3. String
               </a>
           </li>
           <li>
               <a href="/lessons/class" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                <span class="checkmark empty-circle"></span>4. Class
+                <.progress_checkmark checked={Enum.member?(@lesson_statuses, "class")} />4. Class
               </a>
           </li>
           <li>
               <a href="/lessons/instance_variables" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                <span class="checkmark empty-circle"></span>5. Instance Variables
+                <.progress_checkmark checked={Enum.member?(@lesson_statuses, "instance_variable")} />5. Instance Variables
               </a>
           </li>
           <li>
               <a href="/lessons/constructor" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                <span class="checkmark empty-circle"></span>6. Constructor
+                <.progress_checkmark checked={Enum.member?(@lesson_statuses, "constructor")} />6. Constructor
               </a>
           </li>
           <li>
             <a href="/lessons/method" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-              <span class="checkmark empty-circle"></span>7. Method
+              <.progress_checkmark checked={Enum.member?(@lesson_statuses, "methods")} />7. Method
             </a>
           </li>
           <li>
               <a href="/lessons/objects" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                <span class="checkmark empty-circle"></span>8. Objects
+                <.progress_checkmark checked={Enum.member?(@lesson_statuses, "objects")} />8. Objects
               </a>
           </li>
           <li>
             <a href="/quizzes/post_quiz" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-              <span class="checkmark empty-circle"></span>7. Post Quiz
+              <.progress_checkmark checked={Enum.member?(@lesson_statuses, "post_quiz")} />7. Post Quiz
             </a>
           </li>
           <% end %>

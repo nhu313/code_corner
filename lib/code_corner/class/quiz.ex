@@ -8,6 +8,7 @@ defmodule CodeCorner.Class.Quiz do
     field :order_id, :integer
     field :answer, :string
     field :completed, :boolean, virtual: true
+    field :slug, :string
 
     has_many :questions, CodeCorner.Class.QuizQuestion, on_delete: :delete_all
     has_many :submissions, CodeCorner.Class.QuizSubmission
