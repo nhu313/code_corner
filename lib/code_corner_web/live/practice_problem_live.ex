@@ -6,7 +6,7 @@ defmodule CodeCornerWeb.PracticeProblemLive do
   def render(assigns) do
     ~H"""
     <.one_input_form for={@form} phx-submit="submit_answer" class="flex align-top mx-auto">
-      <.input type={@input_type} field={@form[:answer]} placeholder="Enter code" class="practice-input"/>
+      <.input type={@input_type} field={@form[:answer]} placeholder="Enter code" class="practice-input" autocomplete="off"/>
       <.input type="hidden" field={@form[:problem_id]} />
       <.input type="hidden" field={@form[:user_id]} />
       <.button class="practice-submit">Submit</.button>

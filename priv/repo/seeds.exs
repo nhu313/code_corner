@@ -48,14 +48,22 @@
 
 
 import Ecto.Query, warn: false
-from(p in CodeCorner.Practices.Problem, where: p.id > 400) |> CodeCorner.Repo.delete_all()
+# from(p in CodeCorner.Practices.Problem, where: p.id > 400) |> CodeCorner.Repo.delete_all()
 
 # CodeCorner.Repo.insert!(%CodeCorner.Class.Lesson{id: 4, name: "Class", order: 15, slug: "class"})
-CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 401, description: "Create a class called Employee", lesson_id: 4, group: "create_class", answer: "publicclassemployee{}"})
-CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 402, description: "Create a class called Menu", lesson_id: 4, group: "create_class", answer: "publicclassmenu{}"})
-CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 403, description: "Create a class called Order", lesson_id: 4, group: "create_class", answer: "publicclassorder{}"})
-CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 404, description: "Create a class called Drink", lesson_id: 4, group: "create_class", answer: "publicclassdrink{}"})
-CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 405, description: "Create a class called Food", lesson_id: 4, group: "create_class", answer: "publicclassfood{}"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 401, description: "Create a class called Employee", lesson_id: 4, group: "create_class", answer: "publicclassemployee{}"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 402, description: "Create a class called Menu", lesson_id: 4, group: "create_class", answer: "publicclassmenu{}"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 403, description: "Create a class called Order", lesson_id: 4, group: "create_class", answer: "publicclassorder{}"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 404, description: "Create a class called Drink", lesson_id: 4, group: "create_class", answer: "publicclassdrink{}"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 405, description: "Create a class called Food", lesson_id: 4, group: "create_class", answer: "publicclassfood{}"})
+
+
+CodeCorner.Repo.insert!(%CodeCorner.Class.Lesson{id: 7, name: "Instance Variable", order: 17, slug: "instance_variable"})
+CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 701, description: "Create an instance variable of type String named address.", lesson_id: 7, group: "instance_variables", answer: "privatestringaddress;"})
+CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 702, description: "Create an instance variable of type int named numberOfVisit.", lesson_id: 7, group: "instance_variables", answer: "privateintnumberofvisit;"})
+CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 703, description: "Create an instance variable of type String named favoriteDrink.", lesson_id: 7, group: "instance_variables", answer: "privatestringfavoritedrink;"})
+CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 704, description: "Create an instance variable of type int named yearOfBirth.", lesson_id: 7, group: "instance_variables", answer: "privateintyearofbirth;"})
+CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 705, description: "Create an instance variable of type boolean named active.", lesson_id: 7, group: "instance_variables", answer: "privatebooleanactive;"})
 
 
 

@@ -1,9 +1,9 @@
 <h1>Instance Variables</h1>
 <p>Instance variables are often data we want to capture, like fields on the form. It's a "has-a" relationship with the class. In our case, a User has a name, email, and password. There are more information a user has, but for our systems, this is all we need.</p>
-<p>The way is declared is very similar to how a variable is declared without a value. The only difference is that it usually have an accessor, and the accessor is usually private.</p>
+<p>The way to declare an instance variable is very similar to a variable  without a value. The only difference is that it usually have an accessor. The accessor is usually private, which means no one outside of this class can access this field.</p>
 <img src="/images/instance_variables.png" width="400px">
 
-<p>Here are a few more fields that a User has that we may want to capture:</p>
+<p>Here are a few more fields as an example:</p>
 <pre><code class="java">public class User {
   private String name;
   private String email;
@@ -19,32 +19,35 @@
 <ol class="ordered-list">
   <li>
     <p>
-      What data type can be used for quantity (ex: 1, 5, 10)?
+      Create an instance variable of type <b>String</b> named <b>address</b>.
     </p>
-    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 101, "user_id" => @current_user.id}) %>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 701, "user_id" => @current_user.id}) %>
   </li>
   <li>
     <p>
-      What data type can be used to store tax number (ex: 0.06)?
+      Create an instance variable of type <b>int</b> named <b>numberOfVisit</b>.
     </p>
-    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 102, "user_id" => @current_user.id}) %>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 702, "user_id" => @current_user.id}) %>
   </li>
   <li>
     <p>
-      What data type can be used to store server name (ex: "Carol")?
+      Create an instance variable of type <b>String</b> named <b>favoriteDrink</b>.
     </p>
-    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 103, "user_id" => @current_user.id}) %>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 703, "user_id" => @current_user.id}) %>
   </li>
   <li>
     <p>
-      What data type can be used to capture if a table is available or not (ex: true, false)?
+      Create an instance variable of type <b>int</b> named <b>yearOfBirth</b>.
     </p>
-    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 104, "user_id" => @current_user.id}) %>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 704, "user_id" => @current_user.id}) %>
   </li>
   <li>
     <p>
-      What data type can be used to store table number (ex: 1, 2, 3)?
+      Create an instance variable of type <b>boolean</b> named <b>active</b>.
     </p>
-    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 105, "user_id" => @current_user.id}) %>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 705, "user_id" => @current_user.id}) %>
   </li>
 </ol>
+<a href="/lessons/constructor">  <button class="rounded-lg hover:bg-zinc-700 active:text-white/80 primary-btn lesson-next">
+    Next: Constructor
+  </button></a>

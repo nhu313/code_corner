@@ -29,6 +29,10 @@ defmodule CodeCornerWeb.LessonController do
     render(conn, :class)
   end
 
+  def constructor(conn, _params) do
+    render(conn, :constructor)
+  end
+
   def method(conn, _params) do
     render(conn, :method)
   end

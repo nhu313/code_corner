@@ -127,7 +127,7 @@ h3 {
   padding-top: 5px;
 }
 
-strong {
+strong, b {
   color: #222;
 }
 
@@ -181,6 +181,7 @@ input.practice-input[type="text"], textarea.practice-input  {
   height: auto;
   font-size: 12px;
   min-width: 400px;
+  padding: 5px 10px;
   line-height: 1rem;
 }
 
