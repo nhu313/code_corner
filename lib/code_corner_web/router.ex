@@ -34,6 +34,11 @@ defmodule CodeCornerWeb.Router do
     get "/request_logs/users/:user_id", RequestLogController, :user
     get "/request_logs", RequestLogController, :index
     delete "/request_logs/:id", RequestLogController, :delete
+    resources "/lessons", LessonController
+    resources "/quizzes", QuizController
+    resources "/quiz_questions", QuizQuestionController
+    resources "/quiz_submissions", QuizSubmissionController
+    resources "/quiz_results", QuizResultController
   end
 
 
@@ -76,7 +81,21 @@ defmodule CodeCornerWeb.Router do
       live "/submissions/:id/show/edit", SubmissionLive.Show, :edit
     end
 
-    resources "/quiz_results", QuizResultController
+    get "/lessons/variables", LessonController, :variables
+    get "/lessons/data_types", LessonController, :data_types
+    get "/lessons/string", LessonController, :string
+    get "/lessons/class", LessonController, :class
+    get "/lessons/instance_variables", LessonController, :instance_variables
+    get "/lessons/constructor", LessonController, :constructor
+    get "/lessons/method", LessonController, :method
+    get "/lessons/object", LessonController, :object
+
+
+
+    get "/quizzes/pre_quiz", QuizController, :pre_quiz
+    post "/quizzes/pre_quiz", QuizController, :submit_pre_quiz
+    get "/quizzes/post_quiz", QuizController, :post_quiz
+    post "/quizzes/post_quiz", QuizController, :submit_post_quiz
   end
 
   scope "/", CodeCornerWeb do
@@ -90,23 +109,6 @@ defmodule CodeCornerWeb.Router do
       live "/users/confirm", UserConfirmationInstructionsLive, :new
     end
 
-    get "/lessons/variables", LessonController, :variables
-    get "/lessons/data_types", LessonController, :data_types
-    get "/lessons/string", LessonController, :string
-    get "/lessons/class", LessonController, :class
-    get "/lessons/instance_variables", LessonController, :instance_variables
-    get "/lessons/constructor", LessonController, :constructor
-    get "/lessons/method", LessonController, :method
-    get "/lessons/object", LessonController, :object
 
-    resources "/lessons", LessonController
-
-    get "/quizzes/pre_quiz", QuizController, :pre_quiz
-    post "/quizzes/pre_quiz", QuizController, :submit_pre_quiz
-    get "/quizzes/post_quiz", QuizController, :post_quiz
-    post "/quizzes/post_quiz", QuizController, :submit_post_quiz
-    resources "/quizzes", QuizController
-    resources "/quiz_questions", QuizQuestionController
-    resources "/quiz_submissions", QuizSubmissionController
   end
 end
