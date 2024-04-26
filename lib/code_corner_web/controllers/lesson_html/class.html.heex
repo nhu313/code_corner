@@ -55,30 +55,38 @@ Classes are usually nouns such as <code class="inline">System</code> or <code cl
     </p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 401, "user_id" => @current_user.id, "input_type" => "textarea"}) %>
   </li>
+  <%= if @current_user.experiment > 1 do %>
   <li>
     <p>
       Create a class called Menu.
     </p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 402, "user_id" => @current_user.id, "input_type" => "textarea"}) %>
   </li>
+  <% end %>
+  <%= if @current_user.experiment > 2 do %>
   <li>
     <p>
       Create a class called Order.
     </p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 403, "user_id" => @current_user.id, "input_type" => "textarea"}) %>
   </li>
+  <% end %>
+  <%= if @current_user.experiment > 3 do %>
   <li>
     <p>
       Create a class called Drink.
     </p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 404, "user_id" => @current_user.id, "input_type" => "textarea"}) %>
   </li>
+  <% end %>
+  <%= if @current_user.experiment > 4 do %>
   <li>
     <p>
       Create a class called Food.
     </p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 405, "user_id" => @current_user.id, "input_type" => "textarea"}) %>
   </li>
+  <% end %>
 </ol>
 
 <a href="/lessons/instance_variables">  <button class="rounded-lg hover:bg-zinc-700 active:text-white/80 primary-btn lesson-next">

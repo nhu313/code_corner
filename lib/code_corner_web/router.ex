@@ -34,6 +34,7 @@ defmodule CodeCornerWeb.Router do
     get "/request_logs/users/:user_id", RequestLogController, :user
     get "/request_logs", RequestLogController, :index
     delete "/request_logs/:id", RequestLogController, :delete
+    get "/users", UserController, :index
     resources "/lessons", LessonController
     resources "/quizzes", QuizController
     resources "/quiz_questions", QuizQuestionController

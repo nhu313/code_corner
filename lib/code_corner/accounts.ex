@@ -26,6 +26,11 @@ defmodule CodeCorner.Accounts do
     Repo.get_by(User, email: email)
   end
 
+  def list_users do
+    Repo.all(User)
+  end
+
+
   @doc """
   Gets a user by email and password.
 

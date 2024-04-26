@@ -1,0 +1,20 @@
+<.header>
+  Users
+</.header>
+<table>
+<tr>
+<td>ID</td>
+<td>Name</td>
+<td>Experiement</td>
+</tr>
+<tbody>
+<%= for user <- @users do %>
+<tr>
+  <td><%= user.id %></td>
+  <td><%= user.name %></td>
+  <td><%= user.experiment %></td>
+</tr>
+<% end %>
+</tbody>
+
+</table>
