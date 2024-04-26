@@ -1,0 +1,102 @@
+<h1>Summary</h1>
+<p>Let's wrap everything up.</p>
+<ul class="bullets">
+<li>All data in Java has a type.</li>
+<li>There are 8 primitive/base types (byte, short, int, long, float, double, char, boolean).</li>
+<li>Using the primitive data types, we can build more complex types like a User or GiftCard.</li>
+<li>A class defines the complex type. It defines what type of data (instance variables) and functionality (methods) an object has.</li>
+<li>An object is an instance of the class.</li>
+<li>A method has a method name, input, and output. It usually performs an action, so method names tend to be verb.</li>
+</ul>
+
+<h3>Gift Card</h3>
+<p>Take this gift card form for example. It has three fields: recipient name, email, and balance amount.</p>
+<form width="500px" class="inline-block">
+  <div class="form-group">
+    <label for="name">Recipient Name</label>
+    <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Recipient Name">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Balance Amount</label>
+    <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Balance Amount">
+  </div>
+</form>
+
+<p>Internally, the class is represented like this:</p>
+<pre><code class="java">public class GiftCard {
+  private String recipientName;
+  private String email;
+  private double balance;
+
+  public GiftCard(double initialAmount) {
+    this.balance = initialAmount;
+  }
+
+  public double getBalance() {
+    return this.balance;
+  }
+
+  public double deductBalance(double amount) {
+    this.balance = this.balance - amount;
+
+    // methodName(inputs)
+    sendReceipt(amount);
+  }
+
+  public String sendReceipt(double amountUsed) {
+    // code to email receipt
+  }
+}</code></pre>
+
+<p>To use the giftcard, we need to create an instance, then called the method name. There are only three methods we can call, getBalance, deductBalance, and sendReceipt.</p>
+
+<pre><code class="java">GiftCard carolGiftCard = new GiftCard(100.0);
+carolGiftCard.deductBalance(10.0); // does not return anything.
+double currentBalance = carolGiftCard.getBalance();
+</code></pre>
+
+<h3>Let's practice!</h3>
+<p>Given the class OrderItem:</p>
+<pre><code class="java">public class OrderItem {
+  private String itemName;
+  private double price;
+
+  public OrderItem(String itemName, double price) {
+    this.itemName = itemName;
+    this.price = price;
+  }
+
+  public double getTotal(int quantity) {
+    return quantity * this.price;
+  }
+
+  public String getItemName() {
+    return this.itemName;
+  }
+}</code></pre>
+
+
+<ol class="ordered-list">
+  <li>
+    <p>
+      Create a instance (object) of OrderItem named <b>salad</b> with the item named "Green Salad" and price of 10.99.
+    </p>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 601, "user_id" => @current_user.id, "input_type" => "textarea"}) %>
+  </li>
+  <li>
+    <p>
+      Given the object salad above, call the method getItemName.
+    </p>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 602, "user_id" => @current_user.id, "input_type" => "textarea"}) %>
+  </li>
+  <li>
+    <p>
+      Given the object salad above, call the method getTotal with quantity of 2.
+    </p>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 603, "user_id" => @current_user.id, "input_type" => "textarea"}) %>
+  </li>
+</ol>

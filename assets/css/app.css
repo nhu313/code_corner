@@ -46,6 +46,7 @@ p {
 
 .sidebar li {
   border-left: 2px dashed #CCC;
+  margin-left: 3px;
 }
 
 
@@ -231,4 +232,8 @@ input[type="checkbox"]+label, input[type="radio"]+label {
 
 h3 {
   padding-top: 15px;
+}
+
+ul.bullets {
+  list-style: inside;
 }

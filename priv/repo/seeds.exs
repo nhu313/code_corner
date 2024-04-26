@@ -76,19 +76,22 @@ import Ecto.Query, warn: false
 
 
 
+
+# CodeCorner.Repo.insert!(%CodeCorner.Class.Lesson{id: 8, name: "Constructor", order: 17, slug: "constructor"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 801, description: "constructor with name and email", lesson_id: 8, group: "constructor", answer: "publicemployee(stringname,stringemailaddress){};publicemployee(stringname,stringemailaddress){this.name=name;this.email=emailaddress;};publicemployee(stringname,stringemail){this.name=name;this.email=email;};publicemployee(stringname,stringemail){}publicemployee(stringname,stringemail){this.name=name;this.email=email;}"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 802, description: "constructor with name and hourly wage", lesson_id: 8, group: "constructor", answer: "publicemployee(stringname,doublehourlywage){this.name=name;this.hourlywage=hourlywage;};publicemployee(stringname,doublehourlywage){};"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 803, description: "constructor with name and age", lesson_id: 8, group: "constructor", answer: "publicemployee(stringname,intage){this.name=name;this.age=age;};publicemployee(stringname,intage){}"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 804, description: "constructor with name and age, hourlywate", lesson_id: 8, group: "constructor", answer: "publicemployee(stringname,intage,doublehourlywage){};publicemployee(stringname,intage,doublehourlywage){this.name=name;this.age=age;this.hourlywage=hourlywage;}"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 805, description: "constructor with name and email", lesson_id: 8, group: "constructor", answer: "publicemployee(){}"})
+
+
+
+
+
 # CodeCorner.Repo.insert!(%CodeCorner.Class.Lesson{id: 6, name: "Objects", order: 25, slug: "object"})
-
-CodeCorner.Repo.insert!(%CodeCorner.Class.Lesson{id: 8, name: "Constructor", order: 17, slug: "constructor"})
-CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 801, description: "constructor with name and email", lesson_id: 8, group: "constructor", answer: "publicemployee(stringname,stringemailaddress){};publicemployee(stringname,stringemailaddress){this.name=name;this.email=emailaddress;};publicemployee(stringname,stringemail){this.name=name;this.email=email;};publicemployee(stringname,stringemail){}publicemployee(stringname,stringemail){this.name=name;this.email=email;};publicemployee(stringname,doublehourlywage){this.name=name;this.hourlywage=hourlywage;};publicemployee(stringname,doublehourlywage){};publicemployee(stringname,intage){this.name=name;this.age=age;};publicemployee(stringname,intage){}"})
-CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 802, description: "constructor with name and hourly wage", lesson_id: 8, group: "constructor", answer: "publicemployee(stringname,doublehourlywage){this.name=name;this.hourlywage=hourlywage;};publicemployee(stringname,doublehourlywage){};"})
-CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 803, description: "constructor with name and age", lesson_id: 8, group: "constructor", answer: "publicemployee(stringname,intage){this.name=name;this.age=age;};publicemployee(stringname,intage){}"})
-CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 804, description: "constructor with name and age, hourlywate", lesson_id: 8, group: "constructor", answer: "publicemployee(stringname,intage,doublehourlywage){};publicemployee(stringname,intage,doublehourlywage){this.name=name;this.age=age;this.hourlywage=hourlywage;}"})
-CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 805, description: "constructor with name and email", lesson_id: 8, group: "constructor", answer: "publicemployee(){}"})
-
-
-
-
-
+CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 601, description: "constructor with name and price", lesson_id: 6, group: "constructor", answer: "orderitemsalad=neworderitem(\"greensalad\",10.99);"})
+CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 602, description: "constructor with name and email", lesson_id: 6, group: "constructor", answer: "salad.getitemname();"})
+CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 603, description: "constructor with name and email", lesson_id: 6, group: "constructor", answer: "salad.gettotal(2);"})
 
 
 
@@ -124,11 +127,11 @@ CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 805, description: "con
 # end
 
 
-quiz = CodeCorner.Repo.get!(CodeCorner.Class.Quiz, 2)
-        |> Ecto.Changeset.change(slug: "post_quiz")
-        |> Ecto.Changeset.optimistic_lock(:version)
+# quiz = CodeCorner.Repo.get!(CodeCorner.Class.Quiz, 2)
+#         |> Ecto.Changeset.change(slug: "post_quiz")
+#         |> Ecto.Changeset.optimistic_lock(:version)
 
-CodeCorner.Repo.update!(quiz)
+# CodeCorner.Repo.update!(quiz)
 # CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 1, quiz_id: 1, answer: "int", description: "What data type is the most appropriate to store the number of students in a class?"})
 # CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 2, quiz_id: 1, answer: "double", description: "What data type is the most appropriate to store the student's grade point average (GPA) (e.g. 3.4, 4.0)?"})
 # CodeCorner.Repo.insert!(%CodeCorner.Class.QuizQuestion{id: 3, quiz_id: 1, answer: "4.0", description: "What is the value of a?"})
