@@ -29,30 +29,38 @@ String phrase = &quot;Welcome to Java Café&quot;;
     </p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 201, "user_id" => @current_user.id}) %>
   </li>
+  <%= if @current_user.experiment > 1 do %>
   <li>
     <p>
       Create a String variable named <code class="inline">food</code> with the value <code class="inline">Strawberry oats</code>.
     </p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 202, "user_id" => @current_user.id}) %>
   </li>
+  <% end %>
+  <%= if @current_user.experiment > 2 do %>
   <li>
     <p>
       Create a String variable named <code class="inline">barista</code> with the value <code class="inline">Carol</code>
     </p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 203, "user_id" => @current_user.id}) %>
   </li>
+  <% end %>
+  <%= if @current_user.experiment > 3 do %>
   <li>
     <p>
       Create a String variable named <code class="inline">dessert</code> with the value <code class="inline">brownie</code>
     </p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 204, "user_id" => @current_user.id}) %>
   </li>
+  <% end %>
+  <%= if @current_user.experiment > 4 do %>
   <li>
     <p>
       Create a String variable named <code class="inline">smoothie</code> with the value <code class="inline">Sweet Green</code>
     </p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 205, "user_id" => @current_user.id}) %>
   </li>
+  <% end %>
 </ol>
 
 

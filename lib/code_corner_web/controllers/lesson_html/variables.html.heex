@@ -38,24 +38,30 @@
     </p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 1, "user_id" => @current_user.id}) %>
   </li>
+  <%= if @current_user.experiment > 1 do %>
   <li>
     <p>
       Declare/Create a variable name table with the value of 6.
     </p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 2, "user_id" => @current_user.id}) %>
   </li>
+  <% end %>
+  <%= if @current_user.experiment > 2 do %>
   <li>
     <p>
       Declare/Create a variable name year with the value of 2024
     </p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 3, "user_id" => @current_user.id}) %>
   </li>
+  <% end %>
+  <%= if @current_user.experiment > 3 do %>
   <li>
     <p>
       Declare/Create a variable name tax with the value 1.37
     </p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 4, "user_id" => @current_user.id}) %>
   </li>
+  <% end %>
 </ol>
 <% end  %>
 <h2>
@@ -89,20 +95,26 @@
     to indicate if a table paid their tab.
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 5, "user_id" => @current_user.id}) %>
   </li>
+  <%= if @current_user.experiment > 1 do %>
   <li>
     Declare a variable named <code class="inline">initial</code>
     to indicate the server first name initial (one character).
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 6, "user_id" => @current_user.id}) %>
   </li>
+  <% end %>
+  <%= if @current_user.experiment > 2 do %>
   <li>
     Declare a variable named <code class="inline">count</code>
     to indicate the number of customer served.
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 7, "user_id" => @current_user.id}) %>
   </li>
+  <% end %>
+  <%= if @current_user.experiment > 3 do %>
   <li>
     Declare a variable named <code class="inline">check</code> of the type integer.
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 8, "user_id" => @current_user.id}) %>
   </li>
+  <% end %>
 </ol>
 <% end  %>
 <h2>
@@ -132,6 +144,7 @@ total = total + 3.25; // update total to previous value (11.75) + 3.25, total is
     <code class="java"> int count = 1;</code>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 9, "user_id" => @current_user.id}) %>
   </li>
+  <%= if @current_user.experiment > 1 do %>
   <li>
     <p>
       Given the code below, update the total to equal to subtotal plus tax.
@@ -141,18 +154,23 @@ double tax = 1.37;</code></pre>
       <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 10, "user_id" => @current_user.id}) %>
     </p>
   </li>
+  <% end %>
+  <%= if @current_user.experiment > 2 do %>
   <li>
     Given the code below, update the payment to equal to the total / 3.
 <pre><code class="java">double payment;
 double total = 23.87;</code></pre>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 11, "user_id" => @current_user.id}) %>
   </li>
+  <% end %>
+  <%= if @current_user.experiment > 3 do %>
   <li>
     Given the code below, update the total to equal to subtotal.
 <pre><code class="java">int subtotal = 22;
 int total = 25;</code></pre>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 12, "user_id" => @current_user.id}) %>
   </li>
+  <% end %>
 </ol>
 <% end  %>
 

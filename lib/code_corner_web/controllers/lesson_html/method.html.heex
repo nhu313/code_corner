@@ -105,20 +105,28 @@ double remainingBalance = myGiftCard.deductBalance(14.0);
     <p>Create a method called <code class="inline">getItemName()</code> with no input and it returns the instance variable <code class="inline">itemName</code> of type String.</p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 501, "user_id" => @current_user.id, "input_type" => "textarea"}) %>
   </li>
+  <%= if @current_user.experiment > 1 do %>
   <li>
     <p>Create a method called <code class="inline">getPrice()</code> that will return a double with no input. It returns an instance variabled called <code class="inline">price</code>.</p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 502, "user_id" => @current_user.id, "input_type" => "textarea"}) %>
   </li>
+  <% end %>
+  <%= if @current_user.experiment > 2 do %>
   <li>
     <p>Create a method called <code class="inline">setQuantity()</code> with no output. It takes one input of type int called <code class="inline">quantity</code>.</p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 503, "user_id" => @current_user.id, "input_type" => "textarea"}) %>
   </li>
+  <% end %>
+  <%= if @current_user.experiment > 3 do %>
   <li>
     <p>Create a method called <code class="inline">setServerName()</code> with one String input called <code class="inline">serverName</code>. The method return a String.</p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 504, "user_id" => @current_user.id, "input_type" => "textarea"}) %>
   </li>
+  <% end %>
+  <%= if @current_user.experiment > 4 do %>
   <li>
     <p>Create a method called <code class="inline">getTotal()</code> with two inputs, int quantity and double price. The return type should be a double.</p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 505, "user_id" => @current_user.id, "input_type" => "textarea"}) %>
   </li>
+  <% end %>
 </ol>

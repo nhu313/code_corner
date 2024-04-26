@@ -169,30 +169,38 @@ Data type is a way for the computer to understand what the data represent (e.g. 
     </p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 101, "user_id" => @current_user.id}) %>
   </li>
+  <%= if @current_user.experiment > 1 do %>
   <li>
     <p>
       What data type can be used to store tax number (ex: 0.06)?
     </p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 102, "user_id" => @current_user.id}) %>
   </li>
+  <% end %>
+  <%= if @current_user.experiment > 2 do %>
   <li>
     <p>
       What data type can be used to store server name (ex: "Carol")?
     </p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 103, "user_id" => @current_user.id}) %>
   </li>
+  <% end %>
+  <%= if @current_user.experiment > 3 do %>
   <li>
     <p>
       What data type can be used to capture if a table is available or not (ex: true, false)?
     </p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 104, "user_id" => @current_user.id}) %>
   </li>
+  <% end %>
+  <%= if @current_user.experiment > 4 do %>
   <li>
     <p>
       What data type can be used to store table number (ex: 1, 2, 3)?
     </p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 105, "user_id" => @current_user.id}) %>
   </li>
+  <% end %>
 </ol>
 
 <div class="lesson-actions">

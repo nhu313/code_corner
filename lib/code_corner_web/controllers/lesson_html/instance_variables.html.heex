@@ -23,30 +23,38 @@
     </p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 701, "user_id" => @current_user.id}) %>
   </li>
+  <%= if @current_user.experiment > 1 do %>
   <li>
     <p>
       Create an instance variable of type <b>int</b> named <b>numberOfVisit</b>.
     </p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 702, "user_id" => @current_user.id}) %>
   </li>
+  <% end %>
+  <%= if @current_user.experiment > 2 do %>
   <li>
     <p>
       Create an instance variable of type <b>String</b> named <b>favoriteDrink</b>.
     </p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 703, "user_id" => @current_user.id}) %>
   </li>
+  <% end %>
+  <%= if @current_user.experiment > 3 do %>
   <li>
     <p>
       Create an instance variable of type <b>int</b> named <b>yearOfBirth</b>.
     </p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 704, "user_id" => @current_user.id}) %>
   </li>
+  <% end %>
+  <%= if @current_user.experiment > 4 do %>
   <li>
     <p>
       Create an instance variable of type <b>boolean</b> named <b>active</b>.
     </p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 705, "user_id" => @current_user.id}) %>
   </li>
+  <% end %>
 </ol>
 <a href="/lessons/constructor">  <button class="rounded-lg hover:bg-zinc-700 active:text-white/80 primary-btn lesson-next">
     Next: Constructor

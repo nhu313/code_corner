@@ -81,28 +81,36 @@ Now, in order to create a new User, we must have 3 inputs. The input must match 
     </p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 801, "user_id" => @current_user.id, "input_type" => "textarea"}) %>
   </li>
+  <%= if @current_user.experiment > 1 do %>
   <li>
     <p>
       Create a constructor for the Employee class that takes a name (String) and hourlyWage (double). Only the constructor is needed.
     </p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 802, "user_id" => @current_user.id, "input_type" => "textarea"}) %>
   </li>
+    <% end %>
+  <%= if @current_user.experiment > 2 do %>
   <li>
     <p>
       Create a constructor for the Employee class that takes a name (String) and age (int). Only the constructor is needed.
     </p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 803, "user_id" => @current_user.id, "input_type" => "textarea"}) %>
   </li>
+    <% end %>
+  <%= if @current_user.experiment > 3 do %>
   <li>
     <p>
       Create a constructor for the Employee class that takes a name (String), age (int), and hourlyWage (double). Only the constructor is needed.
     </p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 804, "user_id" => @current_user.id, "input_type" => "textarea"}) %>
   </li>
+    <% end %>
+  <%= if @current_user.experiment > 4 do %>
   <li>
     <p>
       Create a constructor for the Employee with no input. Only the constructor is needed.
     </p>
     <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 805, "user_id" => @current_user.id, "input_type" => "textarea"}) %>
   </li>
+    <% end %>
 </ol>
