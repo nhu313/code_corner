@@ -68,6 +68,14 @@ import Ecto.Query, warn: false
 
 
 # CodeCorner.Repo.insert!(%CodeCorner.Class.Lesson{id: 5, name: "Method", order: 20, slug: "method"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 501, description: "Create a method signature called getItemName() which will return an instance variabled called itemName", lesson_id: 5, group: "methods", answer: "publicstringgetitemname(){};publicstringgetitemname(){returnthis.itemname;};publicstringgetitemname(){returnitemname;}"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 502, description: "Create a method signature called getPrice() which will return an instance variabled called price", lesson_id: 5, group: "methods", answer: "publicdoublegetprice(){};publicdoublegetprice(){returnthis.price;};publicdoublegetprice(){returnprice;}"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 503, description: "Create a method called setQuantity with one input of type int called quantity", lesson_id: 5, group: "methods", answer: "publicvoidsetquantity(intquantity){};publicvoidsetquantity(intquantity){this.quantity=quantity;}"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 504, description: "Create a method signature called getServerName() which will return an instance variabled called itemName", lesson_id: 5, group: "methods", answer: "publicstringsetservername(stringservername){};publicstringsetservername(stringservername){this.servername=servername;};publicstringsetservername(stringservername){this.servername=servername;returnthis.servername;};publicstringsetservername(stringservername){this.servername=servername;returnservername;}"})
+# CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 505, description: "Create a method signature called getTotal() which will return an instance variabled called itemName", lesson_id: 5, group: "methods", answer: "publicdoublegettotal(intquantity,doubleprice){};publicdoublegettotal(intquantity,doubleprice){returnthis.total;};publicdoublegettotal(intquantity,doubleprice){returntotal;}publicdoublegettotal(intquantity,doubleprice){returnquantity*price;}"})
+
+
+
 # CodeCorner.Repo.insert!(%CodeCorner.Class.Lesson{id: 6, name: "Objects", order: 25, slug: "object"})
 
 
