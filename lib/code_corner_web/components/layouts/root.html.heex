@@ -93,7 +93,7 @@
         <ul class="font-medium h-max sidebar">
           <li>
               <a href="/" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-              <span class="checkmark empty-circle"></span>_. About
+              <i class="fa fa-circle-check checkmark checked"></i>_. About
               </a>
           </li>
           <%= if @current_user do %>
@@ -122,7 +122,7 @@
           </li>
           <li>
               <a href="/lessons/class" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                <.progress_checkmark checked={Enum.member?(@lesson_statuses, "class")} />4. Class
+                <.progress_checkmark checked={Enum.member?(@lesson_statuses, "class")} />4. Class & Object
               </a>
           </li>
           <li>

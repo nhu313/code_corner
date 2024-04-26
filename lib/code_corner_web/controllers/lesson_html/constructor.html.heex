@@ -33,39 +33,76 @@
 <p>When the system sees the keyword <b>this</b>, it (usually) looks for an instance variable's name after the period. In this case, it looks for an instance variable named "password".</p>
 
 <h2>Inputs</h2>
-<p>Obviously, having a default password is terrible. We should ask the user for the password and give it as an input to initialize the object. To do so, </p>
-<pre><code class="java">public class User {
-  private String password;
+<p>If an object has a required field, we can specified it in the constructor. For example, in order to create a User, we need a name. First we declare the required field (String userInputName), then we update the internal instance variable with the value passed in.</p>
 
-  public User(String userInputPassword) {
-    this.password = userInputPassword;
+<pre><code class="java">public class User {
+  private String name;
+
+  public User(String userInputName) {
+    this.name = userInputName;
   }
 }</code></pre>
 
-<pre><code class="java">User newEmptyUser = new User()</code></pre>
-<p>You need to a class type (User), variable name (newEmptyUser), keyword <b>new</b>, and the class type again. When you use the word <code class="inline">new User()</code> it will create storage space for the fields so the users can fill out the fields.
-<p>For example, given this class:</p>
-<pre><code class="java">public class User {
-  protected String name;
-  protected String email;
-  protected String password;
+<p>To create a user, we need to pass in the name.</p>
+<pre><code class="java">User carol = new User("Carol");</code></pre>
+Note the input type has to match what is declared in the constructor. For the user, the constructor takes a String, therefore, I cannot create a user with an int like the code below.
+<pre><code class="java">User carol = new User(11); // Error</code></pre>
 
+<p>User a comma specify more than one input.
+<pre><code class="java">public class User {
+  private String name;
+  private int age;
+  private boolean vip;
+
+  public User(String userInputName, int age, boolean isVip) {
+    this.name = userInputName;
+    this.age = age;
+    this.vip = isVip;
+  }
 }</code></pre>
 
+Now, in order to create a new User, we must have 3 inputs. The input must match the constructure signature. The constructor for the user specify a String, follow by an int, then a boolean.</p>
+<pre><code class="java">User carol = new User("Carol", 10, false);</code></pre>
 
+<h3>Let's practice!</h3>
+<p>Given this Employee class with the following instance variables.</p>
+<pre><code class="java">public class Employee {
+  private String name;
+  private String email;
+  private double hourlyWage;
+  private int age;
+  private boolean vip;
+}</code></pre>
 
-Note, the accessor is protected here so it can be modified directly, but this is only for demonstration. In real life, 90% of the time, the fields are private.</p>
-<pre><code class="java">//initialize the form
-User carol = new User()
-// filing out the form
-  carol.name = "Carol";
-  carol.email = "carol@gatech.edu";
-  carol.password = "password1234";
-</code></pre>
-
-
-
-
-<p>Notice there is nothing inside the parenthesis for both the constructor and the object creation.</p>
-<p>What if we say, all users need to have a name, which means the constutor needs to have a </p>
-<p>When you open up the form to register as a user, it needs to know what field to create. It looks at the class and and see it needs to display the name, email, and password field. In code, to initialize the fields, it can be declared like a regular variable and the keyword new.</p>
+<ol class="ordered-list">
+  <li>
+    <p>
+      Create a constructor for the Employee class that takes a name (String) and emailAddress (String). Only the constructor is needed.
+    </p>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 801, "user_id" => @current_user.id, "input_type" => "textarea"}) %>
+  </li>
+  <li>
+    <p>
+      Create a constructor for the Employee class that takes a name (String) and hourlyWage (double). Only the constructor is needed.
+    </p>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 802, "user_id" => @current_user.id, "input_type" => "textarea"}) %>
+  </li>
+  <li>
+    <p>
+      Create a constructor for the Employee class that takes a name (String) and age (int). Only the constructor is needed.
+    </p>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 803, "user_id" => @current_user.id, "input_type" => "textarea"}) %>
+  </li>
+  <li>
+    <p>
+      Create a constructor for the Employee class that takes a name (String), age (int), and hourlyWage (double). Only the constructor is needed.
+    </p>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 804, "user_id" => @current_user.id, "input_type" => "textarea"}) %>
+  </li>
+  <li>
+    <p>
+      Create a constructor for the Employee with no input. Only the constructor is needed.
+    </p>
+    <%= live_render(@conn, CodeCornerWeb.PracticeProblemLive, session: %{"problem_id" => 805, "user_id" => @current_user.id, "input_type" => "textarea"}) %>
+  </li>
+</ol>

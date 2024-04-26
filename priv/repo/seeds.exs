@@ -48,7 +48,7 @@
 
 
 import Ecto.Query, warn: false
-# from(p in CodeCorner.Practices.Problem, where: p.id > 400) |> CodeCorner.Repo.delete_all()
+## from(p in CodeCorner.Practices.Problem, where: p.id > 400) |> CodeCorner.Repo.delete_all()
 
 # CodeCorner.Repo.insert!(%CodeCorner.Class.Lesson{id: 4, name: "Class", order: 15, slug: "class"})
 # CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 401, description: "Create a class called Employee", lesson_id: 4, group: "create_class", answer: "publicclassemployee{}"})
@@ -77,6 +77,14 @@ import Ecto.Query, warn: false
 
 
 # CodeCorner.Repo.insert!(%CodeCorner.Class.Lesson{id: 6, name: "Objects", order: 25, slug: "object"})
+
+CodeCorner.Repo.insert!(%CodeCorner.Class.Lesson{id: 8, name: "Constructor", order: 17, slug: "constructor"})
+CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 801, description: "constructor with name and email", lesson_id: 8, group: "constructor", answer: "publicemployee(stringname,stringemailaddress){};publicemployee(stringname,stringemailaddress){this.name=name;this.email=emailaddress;};publicemployee(stringname,stringemail){this.name=name;this.email=email;};publicemployee(stringname,stringemail){}publicemployee(stringname,stringemail){this.name=name;this.email=email;};publicemployee(stringname,doublehourlywage){this.name=name;this.hourlywage=hourlywage;};publicemployee(stringname,doublehourlywage){};publicemployee(stringname,intage){this.name=name;this.age=age;};publicemployee(stringname,intage){}"})
+CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 802, description: "constructor with name and hourly wage", lesson_id: 8, group: "constructor", answer: "publicemployee(stringname,doublehourlywage){this.name=name;this.hourlywage=hourlywage;};publicemployee(stringname,doublehourlywage){};"})
+CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 803, description: "constructor with name and age", lesson_id: 8, group: "constructor", answer: "publicemployee(stringname,intage){this.name=name;this.age=age;};publicemployee(stringname,intage){}"})
+CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 804, description: "constructor with name and age, hourlywate", lesson_id: 8, group: "constructor", answer: "publicemployee(stringname,intage,doublehourlywage){};publicemployee(stringname,intage,doublehourlywage){this.name=name;this.age=age;this.hourlywage=hourlywage;}"})
+CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 805, description: "constructor with name and email", lesson_id: 8, group: "constructor", answer: "publicemployee(){}"})
+
 
 
 
