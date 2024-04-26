@@ -10,6 +10,10 @@
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
 
+import Ecto.Query, warn: false
+from(p in CodeCorner.Class.Lesson) |> CodeCorner.Repo.delete_all()
+from(p in CodeCorner.Practices.Problem) |> CodeCorner.Repo.delete_all()
+
 CodeCorner.Repo.insert!(%CodeCorner.Class.Lesson{id: 1, name: "Data Types", order: 1, slug: "data_types"})
 CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 101, description: "What data type can be used for quantity (ex: 1, 5, 10)?", lesson_id: 1, group: "data_type", answer: "int;short;byte;long;"})
 CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 102, description: "What data type can be used to store tax number (ex: 0.06)?", lesson_id: 1, group: "data_type", answer: "decimal;float"})
@@ -44,8 +48,7 @@ CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 205, description: "Cre
 
 
 
-# import Ecto.Query, warn: false
-## from(p in CodeCorner.Practices.Problem, where: p.id > 400) |> CodeCorner.Repo.delete_all()
+
 
 CodeCorner.Repo.insert!(%CodeCorner.Class.Lesson{id: 4, name: "Class", order: 15, slug: "class"})
 CodeCorner.Repo.insert!(%CodeCorner.Practices.Problem{id: 401, description: "Create a class called Employee", lesson_id: 4, group: "create_class", answer: "publicclassemployee{}"})
