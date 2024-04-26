@@ -12,12 +12,60 @@
   <li><b>{}</b> - open and close curly braces.</li>
 </ol>
 <br>
-<img src="/images/constructor.png" width="400px">
 
-<p>Here's how to use the constructor to create an object called newEmptyUser:</p>
+<p>In order to create the form, a new User object needs to be initialized with the keyword <b>new</b>. When the system sees the word <b>new</b> it looks at the contructor to figure out how to initialize the user.</p>
+<p>Right now, the contructor doesn't do anything. But what if all users has a default password of "password1234". Defaults can be specified in the constructor.</p>
+<pre><code class="java">public class User {
+  private String password;
+
+  public User() {
+    password = "password1234";
+  }
+}</code></pre>
+<p>Everytime a new User is initialized, they have the password "password1234". Often times, developer uses the keyword <b>this</b> to refer to the instance variable. This code is the same as the code above:</p>
+<pre><code class="java">public class User {
+  private String password;
+
+  public User() {
+    this.password = "password1234";
+  }
+}</code></pre>
+<p>When the system sees the keyword <b>this</b>, it (usually) looks for an instance variable's name after the period. In this case, it looks for an instance variable named "password".</p>
+
+<h2>Inputs</h2>
+<p>Obviously, having a default password is terrible. We should ask the user for the password and give it as an input to initialize the object. To do so, </p>
+<pre><code class="java">public class User {
+  private String password;
+
+  public User(String userInputPassword) {
+    this.password = userInputPassword;
+  }
+}</code></pre>
+
 <pre><code class="java">User newEmptyUser = new User()</code></pre>
-<p>Similiar to how you create a variable, you need to specify a class type (User), variable name (newEmptyUser), keyword <b>new</b>, and the class type again.</p>
+<p>You need to a class type (User), variable name (newEmptyUser), keyword <b>new</b>, and the class type again. When you use the word <code class="inline">new User()</code> it will create storage space for the fields so the users can fill out the fields.
+<p>For example, given this class:</p>
+<pre><code class="java">public class User {
+  protected String name;
+  protected String email;
+  protected String password;
+
+}</code></pre>
+
+
+
+Note, the accessor is protected here so it can be modified directly, but this is only for demonstration. In real life, 90% of the time, the fields are private.</p>
+<pre><code class="java">//initialize the form
+User carol = new User()
+// filing out the form
+  carol.name = "Carol";
+  carol.email = "carol@gatech.edu";
+  carol.password = "password1234";
+</code></pre>
+
+
 
 
 <p>Notice there is nothing inside the parenthesis for both the constructor and the object creation.</p>
 <p>What if we say, all users need to have a name, which means the constutor needs to have a </p>
+<p>When you open up the form to register as a user, it needs to know what field to create. It looks at the class and and see it needs to display the name, email, and password field. In code, to initialize the fields, it can be declared like a regular variable and the keyword new.</p>

@@ -1,15 +1,15 @@
 <h1>
 Class &amp; Object</h1>
 <p>
-When we build a system, there are a lot of pieces. We need a way to group things together to manage the data. Java uses classes and object to do it. A class is a template. An object is an instance of a class. What does that really mean?
+When we build a system, there are a lot of pieces. We need a way to group things together to manage the data. Java uses classes and object to do this. A class is a template. An object is an instance of a class. What does that really mean?
 </p>
-<p>Let's take this form below for example. The is a signed up form.</p>
+<p>Let's take this form below for example. This is a signed up form.</p>
 
 <form width="500px" class="inline-block">
   <h2>User Sign Up</h2>
   <div class="form-group">
     <label for="name">Name</label>
-    <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="What do we call you?">
+    <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Name">
   </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
@@ -22,7 +22,7 @@ When we build a system, there are a lot of pieces. We need a way to group things
 </form>
 
 <p>
-This form is the template (class). Everytime a user submit their information, they create an instance (object) of that class. So a class define what fields and functionality the objects should have. An object is the instance of the class. It contains the actual data.
+This form is the template (class). Everytime the user opens up the sign up form, the system will look at the User class and figure out what fields to display. Based on the class, the system intialize the form with the instance of the class; the instance is called object. Every user has their own instance to populate the fields with their own values. A class defines what fields and functionality the objects should have. An object is the instance of the class, it contains the actual data.
 </p>
 <p>Here is what the class looks like in Java:</p>
 <pre><code class="java">public class User {
@@ -31,23 +31,19 @@ This form is the template (class). Everytime a user submit their information, th
   private String password;
 
 }</code></pre>
-<p>Remember we said that Java data is like Lego? The primitive data (e.g. int, double, char) is the base of the building block. We can use the small pieces to build bigger pieces like this User right here. We use multipele chars create String and multiple String to create a User.</p>
+<p>Remember Java data is like Lego? The primitive data (e.g. int, double, char) is the base of the building block. It can use the small pieces to build bigger pieces like this User right here. Multiple chars are used to create a String and multiple Strings are used to create a User.</p>
 
 <h2>Class</h2>
 <p>
-First, let’s talk about outer layer, the class. Here is a class named <code class="inline">User</code> without the fields.</p>
-<pre><code class="java">public class User {
+Classes are usually nouns such as <code class="inline">System</code> or <code class="inline">Map</code>. Here is a class named <code class="inline">User</code> without the fields.</p>
+<img src="/images/user_class.png" width="400px">
 
-}</code></pre>
-<p>
-In Java, code must be written inside a class. Think of a class as a container for code. It it a way to group code that are related together in a file. Classes are usually nouns such as <code class="inline">System</code> or <code class="inline">Map</code> . To create a class, you need the following:</p>
 <ol class="ordered-list">
   <li><b>Access modifier</b> <code class="inline">public</code> - also call accessor. This defines the visibility of the class which means which file can see the code in this class. The options are: public, protected, or default (none). For now, public will be used for all the code created in this class.</li>
 <li><b>class</b> - this is a keyword. It is required to declare a class. In Java, keywords have special meanings. Java keyword cannot be used for variable name.</li>
 <li><b>class name</b> `User` - this is the name of the class. It can be named anything that is not a Java keyword (e.g. class, int). By convention, each word in the name is capitalized. </li>
 <li><b>{}</b> - open and close curly braces. Place the actual code inside these curly braces.</li></ol>
 <br>
-<img src="/images/user_class.png" width="400px">
 
 <h3>
   Let’s practice!
