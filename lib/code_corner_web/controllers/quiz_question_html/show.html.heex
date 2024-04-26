@@ -2,7 +2,7 @@
   Quiz question <%= @quiz_question.id %>
   <:subtitle>This is a quiz_question record from your database.</:subtitle>
   <:actions>
-    <.link href={~p"/quiz_questions/#{@quiz_question}/edit"}>
+    <.link href={~p"/admin/quiz_questions/#{@quiz_question}/edit"}>
       <.button>Edit quiz_question</.button>
     </.link>
   </:actions>
@@ -14,4 +14,4 @@
   <:item title="Description"><%= @quiz_question.description %></:item>
 </.list>
 
-<.back navigate={~p"/quiz_questions"}>Back to quiz_questions</.back>
+<.back navigate={~p"/admin/quiz_questions"}>Back to quiz_questions</.back>

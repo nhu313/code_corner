@@ -2,7 +2,7 @@
   Lesson <%= @lesson.id %>
   <:subtitle>This is a lesson record from your database.</:subtitle>
   <:actions>
-    <.link href={~p"/lessons/#{@lesson}/edit"}>
+    <.link href={~p"/admin/lessons/#{@lesson}/edit"}>
       <.button>Edit lesson</.button>
     </.link>
   </:actions>
@@ -14,4 +14,4 @@
   <:item title="View"><%= @lesson.view %></:item>
 </.list>
 
-<.back navigate={~p"/lessons"}>Back to lessons</.back>
+<.back navigate={~p"/admin/lessons"}>Back to lessons</.back>
