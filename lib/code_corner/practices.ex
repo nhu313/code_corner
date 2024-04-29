@@ -198,6 +198,8 @@ defmodule CodeCorner.Practices do
     Problem.changeset(problem, attrs)
   end
 
+  def submit_answer(%{"answer" => ""}), do: %{result: "failed"}
+
   def submit_answer(attrs) do
     create_submission(attrs)
     problem = get_problem!(attrs["problem_id"])
