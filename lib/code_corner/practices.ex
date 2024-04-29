@@ -203,8 +203,6 @@ defmodule CodeCorner.Practices do
   def submit_answer(attrs) do
     create_submission(attrs)
     problem = get_problem!(attrs["problem_id"])
-    IO.inspect problem.answer
-    IO.inspect clean_answer(attrs["answer"])
     result = if String.contains?(problem.answer,clean_answer(attrs["answer"])), do: "ok", else: "failed"
     %{result: result}
   end

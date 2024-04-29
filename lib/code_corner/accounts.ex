@@ -27,7 +27,15 @@ defmodule CodeCorner.Accounts do
   end
 
   def list_users do
-    Repo.all(User)
+    users = Repo.all from u in User, preload: [:quiz_submissions]
+    Enum.map(users, &map_quiz_score/1)
+  end
+
+  defp map_quiz_score(user) do
+    user = %{user | pre_quiz_score: Enum.count(user.quiz_submissions, fn x -> x.correct && (x.quiz_id == 1) end)}
+    user = %{user | post_quiz_score: Enum.count(user.quiz_submissions, fn x -> x.correct && (x.quiz_id == 2) end)}
+
+    user
   end
 
 
