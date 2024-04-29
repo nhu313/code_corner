@@ -6,12 +6,16 @@
 <td>ID</td>
 <td>Name</td>
 <td>Experiement</td>
+<td>Pre Quiz</td>
+<td>Post Quiz</td>
 </tr>
 <tbody>
 <%= for user <- @users do %>
 <tr>
   <td><%= user.id %></td>
   <td><%= user.name %></td>
+  <td><%= user.experiment %></td>
+  <td><%= user.experiment %></td>
   <td><%= user.experiment %></td>
 </tr>
 <% end %>

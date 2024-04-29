@@ -12,6 +12,9 @@ defmodule CodeCorner.Accounts.User do
     field :confirmed_at, :naive_datetime
     field :years_of_experience, :string
 
+    has_many :pre_quiz_submissions, CodeCorner.Class.QuizSubmission #on user_id = student id, where quiz_id = 1
+    has_many :post_quiz_submissions, CodeCorner.Class.QuizSubmission #on user_id = student id, where quiz_id = 2
+
     timestamps(type: :utc_datetime)
   end
 
